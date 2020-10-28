@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { Container, Attributes, Cabecalho } from "./styles";
+import { Container, Attributes, Cabecalho, Descricao } from "./styles";
 
 const Ficha: React.FC = () => {
   const linhas = [
@@ -39,6 +39,40 @@ const Ficha: React.FC = () => {
   return (
     <Container>
       <h1>Ficha</h1>
+
+      <Descricao>
+        <header>DESCRIÇÃO</header>
+        <div className="content">
+          <div>
+            <label htmlFor="">Sexo</label>
+            <input type="text" />
+          </div>
+          <div>
+            <label htmlFor="">Altura</label>
+            <input type="text" />
+          </div>
+          <div>
+            <label htmlFor="">Cabelos</label>
+            <input type="text" />
+          </div>
+          <div>
+            <label htmlFor="">Olhos</label>
+            <input type="text" />
+          </div>
+          <div>
+            <label htmlFor="">Idade Aparente</label>
+            <input type="text" />
+          </div>
+          <div>
+            <label htmlFor="">Real</label>
+            <input type="text" />
+          </div>
+          <div>
+            <label htmlFor="">Peso</label>
+            <input type="text" />
+          </div>
+        </div>
+      </Descricao>
       <Cabecalho>
         <div>
           <label htmlFor="name">Nome Do Personagem</label>
