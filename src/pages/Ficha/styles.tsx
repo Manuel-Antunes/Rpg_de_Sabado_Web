@@ -15,6 +15,7 @@ export const Cabecalho = styled.div`
       color: #fff;
       font-weight: bold;
     }
+    
     input {
       height: 30px;
       background: none;
