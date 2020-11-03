@@ -7,7 +7,7 @@ export const Container = styled.div`
   padding: 44px 0;
   justify-content: center;
   form {
-    margin-top: 60px;
+    margin-top: 50px;
     .buttons {
       margin-top: 65px;
       display: flex;
@@ -26,17 +26,10 @@ export const Container = styled.div`
     h4 {
       color: #707070;
     }
-    a{
-        text-decoration:none;
-        color:#E65100;
+    a {
+      text-decoration: none;
+      color: #e65100;
     }
     font-size: 20pt;
   }
-`;
-
-export const MeuBotao = styled.button`
-  width: 90px;
-  height: 50px;
-  background-color: #fff;
-  border: 1px black solid;
 `;

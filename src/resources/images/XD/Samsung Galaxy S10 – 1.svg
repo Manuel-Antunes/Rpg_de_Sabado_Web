@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="360" height="760" viewBox="0 0 360 760">
+  <defs>
+    <clipPath id="clip-Samsung_Galaxy_S10_1">
+      <rect width="360" height="760"/>
+    </clipPath>
+  </defs>
+  <g id="Samsung_Galaxy_S10_1" data-name="Samsung Galaxy S10 – 1" clip-path="url(#clip-Samsung_Galaxy_S10_1)">
+    <rect width="360" height="760" fill="#191920"/>
+    <g id="Page-1">
+      <g id="Cart">
+        <path id="Path-2" d="M1,760,361,290.89V0H1Z" transform="translate(-1)" fill="#141419" fill-rule="evenodd"/>
+      </g>
+    </g>
+  </g>
+</svg>

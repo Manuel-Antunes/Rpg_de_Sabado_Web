@@ -1,32 +1,35 @@
 import React from "react";
-import { Form } from "@rocketseat/unform";
+import { Form, SubmitHandler } from "@rocketseat/unform";
 import { Link } from "react-router-dom";
-import { toast } from "react-toastify";
 
-import { Container, MeuBotao } from "./styles";
+import { Container } from "./styles";
 import Logo from "../../components/Logo";
 import FormGroup from "../../components/FormGroup";
 import SubmitButton from "../../components/SubmitButton";
 import GoogleButton from "../../components/GoogleButton";
 import firebase from "../../services/firebase";
+import { toast } from "react-toastify";
 
-const Login: React.FC = () => {
+const SignUp: React.FC = () => {
   return (
     <Container>
       <Logo />
       <Form
-        onSubmit={(p) => {
-          const { login, password } = p;
+        onSubmit={async (p) => {
+          const { login, password, email } = p;
           firebase()
             .auth()
-            .signInWithEmailAndPassword(login, password)
+            .createUserWithEmailAndPassword(email, password)
             .then((user) => {
+              user.user?.updateProfile({
+                displayName: login,
+              });
               console.log(user);
             })
             .catch((err) => {
               toast.error(err.message, {
-                position: "top-right",
-              });
+                position: "top-right",     
+              })
             });
         }}
       >
@@ -36,6 +39,7 @@ const Login: React.FC = () => {
           type={"password"}
           name={"password"}
         />
+        <FormGroup labelContent={"Email"} type={"email"} name={"email"} />
         <div className="buttons">
           <GoogleButton />
           <SubmitButton>Roll</SubmitButton>
@@ -44,14 +48,14 @@ const Login: React.FC = () => {
       </Form>
       <div className="footer">
         <div>
-          <h4>Doesn't have an account?</h4>
+          <h4>Aready have an account?</h4>
         </div>
         <div>
-          <Link to="/register">Sign Up</Link>
+          <Link to="/">Sign Up</Link>
         </div>
       </div>
     </Container>
   );
 };
 
-export default Login;
+export default SignUp;

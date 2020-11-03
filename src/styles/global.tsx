@@ -1,4 +1,8 @@
 import { createGlobalStyle } from "styled-components";
+
+import background from "../resources/images/background.svg";
+import 'react-toastify/dist/ReactToastify.min.css';
+
 export default createGlobalStyle`
     *{
         ::-webkit-scrollbar {
@@ -17,8 +21,9 @@ export default createGlobalStyle`
         height: 100%;
     }
     body{
-        background-image: linear-gradient(90deg, #40326b, #191920);
+        background: #191920 url(${background}) no-repeat center top;
         -webkit-font-smoothing: antialiased;
+
     }
     body, input, button{
         font: 14px sans-serif;
