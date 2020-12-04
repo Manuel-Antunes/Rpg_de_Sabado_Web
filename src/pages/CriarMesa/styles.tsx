@@ -22,7 +22,7 @@ export const Form = styled.div`
   padding: 15rem 4rem 2rem 4rem;
   margin-top: 15rem;
 
-  background-color: black;
+  background-color: #141419;
 
   img {
     width: 22rem;
