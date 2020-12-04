@@ -2,26 +2,38 @@ import React from "react";
 import { Form } from "@rocketseat/unform";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
-
 import { Container, MeuBotao } from "./styles";
 import Logo from "../../components/Logo";
+import { useDispatch } from "react-redux";
 import FormGroup from "../../components/FormGroup";
 import SubmitButton from "../../components/SubmitButton";
 import GoogleButton from "../../components/GoogleButton";
 import firebase from "../../services/firebase";
+import { AuthTypes } from "../../tsstore/ducks/auth/types";
+import { store } from "../../tsstore";
+
+interface formType {
+  login: string;
+  password: string;
+}
 
 const Login: React.FC = () => {
+  const dispatch = useDispatch();
   return (
     <Container>
       <Logo />
       <Form
-        onSubmit={(p) => {
+        onSubmit={(p: formType) => {
           const { login, password } = p;
           firebase()
             .auth()
             .signInWithEmailAndPassword(login, password)
             .then((user) => {
-              console.log(user);
+              dispatch({
+                type: AuthTypes.SIGN_IN_REQUEST,
+                payload: { login, password },
+              });
+              console.log(store.getState);
             })
             .catch((err) => {
               toast.error(err.message, {
