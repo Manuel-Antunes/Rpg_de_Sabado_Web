@@ -7,6 +7,7 @@ export default createGlobalStyle`
     *{
         ::-webkit-scrollbar {
             width: 5px;
+            
         }
         ::-webkit-scrollbar-thumb {
             background: #191920; 
@@ -16,6 +17,7 @@ export default createGlobalStyle`
         padding: 0;
         outline: 0;
         box-sizing: border-box;
+        font-size: 62.5%;
     }
     html,body, #root{
         height: 100%;
@@ -29,7 +31,7 @@ export default createGlobalStyle`
         font: 14px sans-serif;
     }
     #root {
-        max-width: 1020px;
+        /* max-width: 1020px; */
         margin: 0 auto;
         padding: 0 20px 50px;
     }
