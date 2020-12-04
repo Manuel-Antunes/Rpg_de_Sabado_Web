@@ -10,12 +10,18 @@ import GoogleButton from "../../components/GoogleButton";
 import firebase from "../../services/firebase";
 import { toast } from "react-toastify";
 
+interface formType {
+  email: string;
+  login: string;
+  password: string;
+}
+
 const SignUp: React.FC = () => {
   return (
     <Container>
       <Logo />
-      <Form
-        onSubmit={async (p) => {
+      <Form 
+        onSubmit={async (p: formType) => {
           const { login, password, email } = p;
           firebase()
             .auth()
@@ -28,8 +34,8 @@ const SignUp: React.FC = () => {
             })
             .catch((err) => {
               toast.error(err.message, {
-                position: "top-right",     
-              })
+                position: "top-right",
+              });
             });
         }}
       >
@@ -51,7 +57,7 @@ const SignUp: React.FC = () => {
           <h4>Aready have an account?</h4>
         </div>
         <div>
-          <Link to="/">Sign Up</Link>
+          <Link to="/">Sign In</Link>
         </div>
       </div>
     </Container>
