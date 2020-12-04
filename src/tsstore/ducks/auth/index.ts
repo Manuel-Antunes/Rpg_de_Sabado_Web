@@ -1,5 +1,5 @@
-import { Reducer } from "redux";
-import { AuthState, AuthTypes } from "./types";
+import { Reducer } from 'redux';
+import { AuthState, AuthTypes } from './types';
 
 const INITIAL_STATE: AuthState = {
   data: { signed: false, token: null },
@@ -20,7 +20,7 @@ const reducer: Reducer<AuthState> = (state = INITIAL_STATE, action) => {
         ...state,
         error: false,
         loading: false,
-        data: { signed: true, token: "123" },
+        data: { signed: true, token: '123' },
       };
     default:
       return state;

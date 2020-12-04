@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components';
 
 const rotate = keyframes`
     form {
@@ -22,8 +22,8 @@ const grow = keyframes`
 
 export const Container = styled.div`
   display: inline-block;
-  @import url("https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap");
-  
+  @import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+
   position: relative;
   h1 {
     text-align: center;
@@ -63,7 +63,7 @@ export const Container = styled.div`
     transform: rotate(-20deg);
     animation: ${rotate} 1s linear alternate infinite;
     color: #e65100;
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
     position: absolute;
     &:hover {
       cursor: default;

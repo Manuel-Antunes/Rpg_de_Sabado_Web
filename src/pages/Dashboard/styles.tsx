@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { darken } from "polished";
+import styled from 'styled-components';
+import { darken } from 'polished';
 
 export const Container = styled.div`
   div.userContainer {
@@ -49,7 +49,7 @@ export const TableList = styled.ul`
   background: #141419;
   &::-webkit-scrollbar {
     width: 5px;
-    background: ${darken(0.2, "#e65100")};
+    background: ${darken(0.2, '#e65100')};
   }
   &::-webkit-scrollbar-thumb {
     background: #e65100;
@@ -92,4 +92,3 @@ export const TableList = styled.ul`
     }
   }
 `;
-

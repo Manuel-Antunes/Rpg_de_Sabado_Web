@@ -1,12 +1,12 @@
-import React from "react";
+import React, { ButtonHTMLAttributes } from 'react';
 
-import {} from "@rocketseat/unform";
-import { Button } from "./styles";
+import {} from '@rocketseat/unform';
+import { Button } from './styles';
 
-const SubmitButton: React.FC = (props) => {
-  return (
-    <Button type="submit">{props.children ? props.children : "Send..."}</Button>
-  );
+type SubmitButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
+
+const SubmitButton: React.FC<SubmitButtonProps> = ({ children }) => {
+  return <Button type="submit">{children || 'Send...'}</Button>;
 };
 
 export default SubmitButton;

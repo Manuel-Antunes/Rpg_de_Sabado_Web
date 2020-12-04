@@ -1,10 +1,11 @@
-import { all, takeLatest } from "redux-saga/effects";
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+import { all, takeLatest } from 'redux-saga/effects';
 
-import { RepositoriesTypes } from "./repositories/types";
+import { RepositoriesTypes } from './repositories/types';
 
-import { load } from "./repositories/sagas";
-import * as auth from "./auth/saga";
-import { AuthTypes } from "./auth/types";
+import { load } from './repositories/sagas';
+import * as auth from './auth/saga';
+import { AuthTypes } from './auth/types';
 
 export default function* rootSaga() {
   return yield all([

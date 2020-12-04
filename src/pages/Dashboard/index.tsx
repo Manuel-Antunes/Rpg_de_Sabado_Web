@@ -1,19 +1,22 @@
-import React, { useEffect, useState, ChangeEvent } from "react";
-import ded from "../../resources/images/dungeons.png";
-import cyber from "../../resources/images/cyberpunk.png";
-import daemon from "../../resources/images/Daemon.png";
-import updateB from "../../resources/images/XD/update.png";
-import deleteB from "../../resources/images/XD/delete.png";
-import dice from "../../resources/images/baixados.png";
-import { Container, TableList } from "./styles";
-import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
-import MainHeader from "../../components/MainHeader";
-import { User } from "../../tsstore/ducks/user/types";
-import { ApplicationState } from "../../tsstore";
-import { AuthTypes } from "../../tsstore/ducks/auth/types";
-import { toast } from "react-toastify";
-import { Game } from "../../types";
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable consistent-return */
+/* eslint-disable no-console */
+import React, { useEffect, useState, ChangeEvent } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import ded from '../../resources/images/dungeons.png';
+import cyber from '../../resources/images/cyberpunk.png';
+import daemon from '../../resources/images/Daemon.png';
+import updateB from '../../resources/images/XD/update.png';
+import deleteB from '../../resources/images/XD/delete.png';
+import dice from '../../resources/images/baixados.png';
+import { Container, TableList } from './styles';
+import MainHeader from '../../components/MainHeader';
+import { User } from '../../tsstore/ducks/user/types';
+import { ApplicationState } from '../../tsstore';
+import { AuthTypes } from '../../tsstore/ducks/auth/types';
+import { Game } from '../../types';
 
 interface OwnProps {
   data: User;
@@ -27,54 +30,54 @@ const Dashboard: React.FC = () => {
   }
   console.log(user);
   const [mesas, setMesas] = useState<Game[]>([]);
-  const [finder, setFinder] = useState("");
+  const [finder, setFinder] = useState('');
   useEffect(() => {
     const teste = [
       {
-        id: "1",
-        nome: "Dungeons&Dragons",
+        id: '1',
+        nome: 'Dungeons&Dragons',
         logo: ded,
         players: 3,
         maxPlayers: 10,
       },
       {
         id: 2,
-        nome: "Cyberpunk 2077",
+        nome: 'Cyberpunk 2077',
         logo: cyber,
         players: 5,
         maxPlayers: 10,
       },
       {
         id: 3,
-        nome: "Daemon Cyberpunk",
+        nome: 'Daemon Cyberpunk',
         logo: daemon,
         players: 10,
         maxPlayers: 13,
       },
       {
         id: 4,
-        nome: "Daemon Cyberpunk",
+        nome: 'Daemon Cyberpunk',
         logo: daemon,
         players: 10,
         maxPlayers: 13,
       },
       {
         id: 5,
-        nome: "Daemon Cyberpunk",
+        nome: 'Daemon Cyberpunk',
         logo: daemon,
         players: 10,
         maxPlayers: 13,
       },
       {
         id: 6,
-        nome: "Daemon Cyberpunk",
+        nome: 'Daemon Cyberpunk',
         logo: daemon,
         players: 10,
         maxPlayers: 13,
       },
       {
         id: 7,
-        nome: "Daemon Cyberpunk",
+        nome: 'Daemon Cyberpunk',
         logo: daemon,
         players: 10,
         maxPlayers: 13,
@@ -86,41 +89,41 @@ const Dashboard: React.FC = () => {
     const newMesas = [...mesas];
     newMesas.push(game);
     setMesas(newMesas);
-    toast.success("Jogo Adicionado Com Sucesso", { position: "top-right" });
+    toast.success('Jogo Adicionado Com Sucesso', { position: 'top-right' });
   }
   function handleFindGame(id: string) {
     const games = [
       {
-        id: "1",
-        nome: "Dungeons&Dragons",
+        id: '1',
+        nome: 'Dungeons&Dragons',
         logo: ded,
         players: 3,
         maxPlayers: 10,
       },
       {
-        id: "10",
-        nome: "Cyberpunk 2077",
+        id: '10',
+        nome: 'Cyberpunk 2077',
         logo: cyber,
         players: 5,
         maxPlayers: 10,
       },
     ];
     const achado = mesas.find((elemen) => {
-      return elemen.id == id;
+      return elemen.id === id;
     });
     console.log(achado);
     if (achado) {
-      return toast.error("Esse Jogo Já foi Cadastrado", {
-        position: "top-right",
+      return toast.error('Esse Jogo Já foi Cadastrado', {
+        position: 'top-right',
       });
     }
     const game = games.find((element) => {
-      return element.id == id;
+      return element.id === id;
     });
     if (game) {
       addGame(game);
     } else {
-      toast.error("Mesa não encontrada", { position: "top-right" });
+      toast.error('Mesa não encontrada', { position: 'top-right' });
     }
   }
   function handleDelete(object: Game) {
@@ -144,12 +147,13 @@ const Dashboard: React.FC = () => {
           }}
         />
         <button
+          type="button"
           onClick={() => {
-            if (finder != "") {
+            if (finder !== '') {
               handleFindGame(finder);
             } else {
-              toast.error("insira um valor antes de pesquisar", {
-                position: "top-right",
+              toast.error('insira um valor antes de pesquisar', {
+                position: 'top-right',
               });
             }
           }}
@@ -159,8 +163,8 @@ const Dashboard: React.FC = () => {
       </div>
       <div className="userContainer">
         <img
-          src={user?.photoURL ? user.photoURL : ""}
-          style={{ width: "100px", height: "100px" }}
+          src={user?.photoURL ? user.photoURL : ''}
+          style={{ width: '100px', height: '100px' }}
           alt=""
         />
         <label>{user?.displayName}</label>
@@ -170,10 +174,10 @@ const Dashboard: React.FC = () => {
         <TableList>
           {mesas.map((game) => (
             <li key={game.id}>
-              <button className="clicable">
+              <button type="button" className="clicable">
                 <img className="logo" src={game.logo} alt={game.nome} />
               </button>
-              <Link to={"/game/" + game.id}>{game.nome}</Link>
+              <Link to={`/game/${game.id}`}>{game.nome}</Link>
               <span>
                 {game.players}/{game.maxPlayers}
               </span>
@@ -184,6 +188,7 @@ const Dashboard: React.FC = () => {
                   </Link>
                 </span>
                 <button
+                  type="button"
                   onClick={() => {
                     handleDelete(game);
                   }}
@@ -195,7 +200,7 @@ const Dashboard: React.FC = () => {
           ))}
         </TableList>
       </section>
-      <button className="logout" onClick={handleLogout}>
+      <button type="button" className="logout" onClick={handleLogout}>
         LogOut
       </button>
     </Container>

@@ -1,5 +1,5 @@
-import { darken } from "polished";
-import styled from "styled-components";
+import { darken } from 'polished';
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: grid;
@@ -27,7 +27,7 @@ export const Categorias = styled.div`
     font-size: 50px;
     color: #e65100;
     text-align: center;
-    font-family: "Kalam", cursive;
+    font-family: 'Kalam', cursive;
   }
 `;
 export const Main = styled.div`
@@ -38,7 +38,7 @@ export const Main = styled.div`
     overflow-y: scroll;
     &::-webkit-scrollbar {
       width: 5px;
-      background: ${darken(0.2, "#e65100")};
+      background: ${darken(0.2, '#e65100')};
     }
     &::-webkit-scrollbar-thumb {
       background: #e65100;
@@ -102,16 +102,16 @@ export const Jogadores = styled.div`
     font-size: 50px;
     color: #e65100;
     text-align: center;
-    font-family: "Kalam", cursive;
+    font-family: 'Kalam', cursive;
   }
 `;
 export const MenuBar = styled.div`
   grid-column: 1/4;
   display: flex;
-  button{
+  button {
     width: 20rem;
-    img{
-      width:100%;
+    img {
+      width: 100%;
     }
   }
   justify-content: space-between;
@@ -146,26 +146,26 @@ export const Dices = styled.div`
   div {
     display: flex;
     button {
-      background:none;
-      border:none;
-      width:5rem;
+      background: none;
+      border: none;
+      width: 5rem;
       img {
-        width:100%;
+        width: 100%;
       }
-      span{
+      span {
         font-size: 25px;
       }
       flex-direction: column;
       display: flex;
-      justify-content:center;
-      align-items:center;
+      justify-content: center;
+      align-items: center;
     }
   }
   span {
     font-size: 50px;
     color: #e65100;
     text-align: center;
-    font-family: "Kalam", cursive;
+    font-family: 'Kalam', cursive;
   }
 `;
 export const Chat = styled.div``;

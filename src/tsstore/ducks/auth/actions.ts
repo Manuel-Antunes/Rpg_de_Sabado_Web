@@ -1,7 +1,7 @@
-import { action } from "typesafe-actions";
+import { action } from 'typesafe-actions';
 
-import { AuthTypes } from "./types";
-import { User } from "../user/types";
+import { AuthTypes } from './types';
+import { User } from '../user/types';
 
 export const signInRequest = (login: string, password: string) =>
   action(AuthTypes.SIGN_IN_REQUEST, { login, password });

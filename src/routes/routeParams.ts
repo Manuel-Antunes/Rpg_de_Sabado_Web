@@ -1,7 +1,7 @@
-import { RouteComponentProps } from "react-router";
+import { RouteComponentProps } from 'react-router';
 
 interface MesaParams {
   id: string;
 }
 
-export interface MesaComponentProps extends RouteComponentProps<MesaParams> {}
+export type MesaComponentProps = RouteComponentProps<MesaParams>;

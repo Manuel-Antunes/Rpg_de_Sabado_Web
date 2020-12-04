@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
@@ -26,9 +26,9 @@ export const Container = styled.div`
     h4 {
       color: #707070;
     }
-    a{
-        text-decoration:none;
-        color:#E65100;
+    a {
+      text-decoration: none;
+      color: #e65100;
     }
     font-size: 20pt;
   }

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
@@ -13,12 +13,12 @@ export const Container = styled.div`
   }
 `;
 export const Cabecalho = styled.div`
-  @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap");
+  @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 40px;
   max-width: 600px;
-  font-family: "Kalam", cursive;
+  font-family: 'Kalam', cursive;
   div {
     font-size: 20px;
     display: flex;
@@ -33,7 +33,7 @@ export const Cabecalho = styled.div`
       border: none;
       border-bottom: 1px solid #191920;
     }
-    input[type="number"] {
+    input[type='number'] {
       &::-webkit-outer-spin-button,
       &::-webkit-inner-spin-button {
         -webkit-appearance: none;
@@ -43,7 +43,7 @@ export const Cabecalho = styled.div`
   }
 `;
 export const Descricao = styled.div`
-  @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap");
+  @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
   display: flex;
   max-width: 500px;
   flex-direction: column;
@@ -70,7 +70,7 @@ export const Descricao = styled.div`
     label {
       font-weight: bold;
     }
-    font-family: "Kalam", cursive;
+    font-family: 'Kalam', cursive;
     input {
       margin-left: 10px;
       border: none;
@@ -83,7 +83,7 @@ export const Descricao = styled.div`
 `;
 
 export const Experiencia = styled.div`
-  @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap");
+  @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
   display: flex;
   flex-direction: column;
   max-width: 500px;
@@ -110,7 +110,7 @@ export const Experiencia = styled.div`
       float: left;
       font-weight: bold;
     }
-    font-family: "Kalam", cursive;
+    font-family: 'Kalam', cursive;
     input {
       border: none;
       width: 100%;
@@ -122,7 +122,7 @@ export const Experiencia = styled.div`
 `;
 
 export const PericiasComArmas = styled.table`
-  font-family: "Kalam", cursive;
+  font-family: 'Kalam', cursive;
   width: 420px;
   header {
     font-family: Arial, Helvetica, sans-serif;
@@ -215,7 +215,7 @@ export const Stats = styled.div`
         font-weight: bold;
       }
       h3 {
-        font-family: "Kalam", cursive;
+        font-family: 'Kalam', cursive;
       }
     }
     .formGroup {
@@ -223,18 +223,18 @@ export const Stats = styled.div`
       display: flex;
       flex-direction: column;
       label {
-        font-family: "Kalam", cursive;
+        font-family: 'Kalam', cursive;
         font-weight: bold;
         font-size: 130%;
       }
       input {
         text-align: center;
-        font-family: "Henny Penny", cursive;
+        font-family: 'Henny Penny', cursive;
         font-size: 20px;
         height: 50px;
         width: 80px;
       }
-      input[type="number"] {
+      input[type='number'] {
         &::-webkit-outer-spin-button,
         &::-webkit-inner-spin-button {
           -webkit-appearance: none;
@@ -248,11 +248,11 @@ export const Protecoes = styled.div`
   display: flex;
   flex-direction: column;
   label {
-    font-family: "Henny Penny", cursive;
+    font-family: 'Henny Penny', cursive;
     font-size: 30px;
   }
   h4 {
-    font-family: "Kalam", cursive;
+    font-family: 'Kalam', cursive;
   }
   div {
     display: flex;
@@ -265,7 +265,7 @@ export const Protecoes = styled.div`
     padding: 2px 20px;
     border-bottom: 1px solid #191920;
   }
-  input[type="number"] {
+  input[type='number'] {
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
       -webkit-appearance: none;

@@ -1,6 +1,7 @@
-import React, { InputHTMLAttributes } from "react";
-import { Route, Redirect, RouteProps } from "react-router-dom";
-import { store } from "../tsstore";
+/* eslint-disable no-console */
+import React, { InputHTMLAttributes } from 'react';
+import { Route, Redirect, RouteProps } from 'react-router-dom';
+import { store } from '../tsstore';
 
 interface RouteWrapperProps extends RouteProps {
   isPrivate?: boolean;
@@ -11,8 +12,8 @@ const RouteWrapper: React.FC<RouteWrapperProps> = ({
   isPrivate = false,
   ...rest
 }) => {
-  console.log(store.getState())
-  const signed = store.getState().auth.data.signed;
+  console.log(store.getState());
+  const { signed } = store.getState().auth.data;
   if (!signed && isPrivate) {
     return <Redirect to="/login" />;
   }

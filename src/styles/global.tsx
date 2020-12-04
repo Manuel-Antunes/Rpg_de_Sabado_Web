@@ -1,18 +1,18 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
-import background from "../resources/images/background.svg";
+import background from '../resources/images/background.svg';
 import 'react-toastify/dist/ReactToastify.min.css';
 
 export default createGlobalStyle`
     *{
         ::-webkit-scrollbar {
             width: 5px;
-            
+
         }
         ::-webkit-scrollbar-thumb {
-            background: #191920; 
-            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
-        }   
+            background: #191920;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+        }
         margin: 0;
         padding: 0;
         outline: 0;

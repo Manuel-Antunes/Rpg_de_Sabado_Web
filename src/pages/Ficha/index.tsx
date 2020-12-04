@@ -1,6 +1,10 @@
-import React, { useState, useEffect } from "react";
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable jsx-a11y/control-has-associated-label */
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable no-console */
+import React, { useState, useEffect } from 'react';
 
-import logo from "../../resources/images/Daemon.png";
+import logo from '../../resources/images/Daemon.png';
 import {
   Container,
   Attributes,
@@ -10,28 +14,28 @@ import {
   PericiasComArmas,
   Stats,
   Protecoes,
-} from "./styles";
+} from './styles';
 
 const Ficha: React.FC = () => {
   const [estado, setEstado] = useState({
-    nomeDoPersonagem: "",
-    religião: "",
-    localDeNascimento: "",
-    nome_do_jogador: "",
-    kit: "",
+    nomeDoPersonagem: '',
+    religião: '',
+    localDeNascimento: '',
+    nome_do_jogador: '',
+    kit: '',
     nivel: 0,
-    religiao: "",
-    nomeDoJogador: "",
-    idiomas: "",
-    sexo: "",
-    altura: "",
-    cabelos: "",
-    olhos: "",
+    religiao: '',
+    nomeDoJogador: '',
+    idiomas: '',
+    sexo: '',
+    altura: '',
+    cabelos: '',
+    olhos: '',
     idadeAparente: 0,
     idadeReal: 0,
-    peso: "0 kg",
-    xp: "",
-    xpNl: "",
+    peso: '0 kg',
+    xp: '',
+    xpNl: '',
     pvAt: 0,
     ph: 0,
     phAt: 0,
@@ -41,193 +45,193 @@ const Ficha: React.FC = () => {
     pfAt: 0,
     protecoes: {
       armaduara1: {
-        name: "",
+        name: '',
         value: 0,
       },
       armaduara2: {
-        name: "",
+        name: '',
         value: 0,
       },
       escudo: {
-        name: "",
+        name: '',
         value: 0,
       },
       outros: {
-        name: "",
+        name: '',
         value: 0,
       },
     },
     linhas: [
-      { title: "CON", full: "Constituição", value: 0, mod: 0 },
-      { title: "FR", full: "Força", value: 0, mod: 0 },
-      { title: "DEX", full: "Destresa", value: 0, mod: 0 },
-      { title: "AGI", full: "Agilidade", value: 0, mod: 0 },
-      { title: "INT", full: "Inteligencia", value: 0, mod: 0 },
-      { title: "WILL", full: "Força de Vontade", value: 0, mod: 0 },
-      { title: "PER", full: "Percepção", value: 0, mod: 0 },
-      { title: "CAR", full: "Carisma", value: 0, mod: 0 },
+      { title: 'CON', full: 'Constituição', value: 0, mod: 0 },
+      { title: 'FR', full: 'Força', value: 0, mod: 0 },
+      { title: 'DEX', full: 'Destresa', value: 0, mod: 0 },
+      { title: 'AGI', full: 'Agilidade', value: 0, mod: 0 },
+      { title: 'INT', full: 'Inteligencia', value: 0, mod: 0 },
+      { title: 'WILL', full: 'Força de Vontade', value: 0, mod: 0 },
+      { title: 'PER', full: 'Percepção', value: 0, mod: 0 },
+      { title: 'CAR', full: 'Carisma', value: 0, mod: 0 },
     ],
     aprimoramentos: [
       {
-        nome: "",
-        custo: "",
+        nome: '',
+        custo: '',
       },
       {
-        nome: "",
-        custo: "",
+        nome: '',
+        custo: '',
       },
       {
-        nome: "",
-        custo: "",
+        nome: '',
+        custo: '',
       },
       {
-        nome: "",
-        custo: "",
+        nome: '',
+        custo: '',
       },
       {
-        nome: "",
-        custo: "",
+        nome: '',
+        custo: '',
       },
       {
-        nome: "",
-        custo: "",
+        nome: '',
+        custo: '',
       },
       {
-        nome: "",
-        custo: "",
+        nome: '',
+        custo: '',
       },
       {
-        nome: "",
-        custo: "",
+        nome: '',
+        custo: '',
       },
     ],
     pericias: [
       {
-        nome: "Nome",
-        atributo: "atributo",
+        nome: 'Nome',
+        atributo: 'atributo',
         gasto: 0,
       },
       {
-        nome: "Nome",
-        atributo: "atributo",
+        nome: 'Nome',
+        atributo: 'atributo',
         gasto: 0,
       },
       {
-        nome: "Nome",
-        atributo: "atributo",
+        nome: 'Nome',
+        atributo: 'atributo',
         gasto: 0,
       },
       {
-        nome: "Nome",
-        atributo: "atributo",
+        nome: 'Nome',
+        atributo: 'atributo',
         gasto: 0,
       },
       {
-        nome: "Nome",
-        atributo: "atributo",
+        nome: 'Nome',
+        atributo: 'atributo',
         gasto: 0,
       },
       {
-        nome: "Nome",
-        atributo: "atributo",
+        nome: 'Nome',
+        atributo: 'atributo',
         gasto: 0,
       },
       {
-        nome: "Nome",
-        atributo: "atributo",
+        nome: 'Nome',
+        atributo: 'atributo',
         gasto: 0,
       },
       {
-        nome: "Nome",
-        atributo: "atributo",
+        nome: 'Nome',
+        atributo: 'atributo',
         gasto: 0,
       },
       {
-        nome: "Nome",
-        atributo: "atributo",
+        nome: 'Nome',
+        atributo: 'atributo',
         gasto: 0,
       },
       {
-        nome: "Nome",
-        atributo: "atributo",
+        nome: 'Nome',
+        atributo: 'atributo',
         gasto: 0,
       },
       {
-        nome: "Nome",
-        atributo: "atributo",
+        nome: 'Nome',
+        atributo: 'atributo',
         gasto: 0,
       },
       {
-        nome: "Nome",
-        atributo: "atributo",
+        nome: 'Nome',
+        atributo: 'atributo',
         gasto: 0,
       },
       {
-        nome: "Nome",
-        atributo: "atributo",
+        nome: 'Nome',
+        atributo: 'atributo',
         gasto: 0,
       },
       {
-        nome: "Nome",
-        atributo: "atributo",
+        nome: 'Nome',
+        atributo: 'atributo',
         gasto: 0,
       },
     ],
     periciasComArmas: [
       {
-        nome: "Briga",
-        atributo: "",
-        tipo: "",
-        gastoAt: "",
-        at: "",
-        def: "",
-        gastoDef: "",
-        dano: "",
+        nome: 'Briga',
+        atributo: '',
+        tipo: '',
+        gastoAt: '',
+        at: '',
+        def: '',
+        gastoDef: '',
+        dano: '',
       },
       {
-        nome: "Pistola",
-        atributo: "DEX  ",
-        tipo: "Ranged",
-        gastoAt: "",
+        nome: 'Pistola',
+        atributo: 'DEX  ',
+        tipo: 'Ranged',
+        gastoAt: '',
         at: 20,
-        def: "",
-        gastoDef: "",
-        dano: "",
+        def: '',
+        gastoDef: '',
+        dano: '',
       },
       {
-        nome: "Armas de cano longo",
-        atributo: "DEX",
-        tipo: "Ranged",
-        gastoAt: "",
+        nome: 'Armas de cano longo',
+        atributo: 'DEX',
+        tipo: 'Ranged',
+        gastoAt: '',
         at: 20,
-        def: "",
-        gastoDef: "",
-        dano: "",
+        def: '',
+        gastoDef: '',
+        dano: '',
       },
     ],
   });
   useEffect(() => {
     console.log(estado.protecoes.armaduara1);
-  },[estado]);
+  }, [estado]);
   function handleUpdate(
     e: React.ChangeEvent<HTMLInputElement>,
     limite: number,
-    multiplicador: number
+    multiplicador: number,
   ) {
-    if (parseInt(e.target.value) < 0) {
-      e.target.value = "0";
+    if (parseInt(e.target.value, 10) < 0) {
+      e.target.value = '0';
     }
-    if (parseInt(e.target.value) > limite) {
-      e.target.value = "" + limite;
+    if (parseInt(e.target.value, 10) > limite) {
+      e.target.value = `${limite}`;
     }
-    const [a, index] = e.target.id.split(" ");
+    const [a, index] = e.target.id.split(' ');
     try {
-      const b = document.getElementById("percent " + index) as HTMLInputElement;
+      const b = document.getElementById(`percent ${index}`) as HTMLInputElement;
       b.value = b.value
-        ? "" + parseInt(e.target.value) * multiplicador
-        : "" + parseInt(e.target.value) * multiplicador;
+        ? `${parseInt(e.target.value, 10) * multiplicador}`
+        : `${parseInt(e.target.value, 10) * multiplicador}`;
     } catch (err) {
-      console.log("asodasd");
+      console.log('asodasd');
     }
   }
   return (
@@ -288,7 +292,7 @@ const Ficha: React.FC = () => {
                       handleUpdate(e, 100, 4);
                     }}
                     type="number"
-                    id={"value " + index}
+                    id={`value ${index}`}
                   />
                 </td>
                 <td>
@@ -297,7 +301,7 @@ const Ficha: React.FC = () => {
                       handleUpdate(e, 100, 44);
                     }}
                     type="number"
-                    id={"mod " + index}
+                    id={`mod ${index}`}
                   />
                 </td>
                 <td>
@@ -305,7 +309,7 @@ const Ficha: React.FC = () => {
                     disabled
                     type="number"
                     name="percent"
-                    id={"percent " + index}
+                    id={`percent ${index}`}
                   />
                 </td>
               </tr>
@@ -318,7 +322,7 @@ const Ficha: React.FC = () => {
               <tr>
                 <td>
                   <div>
-                    <h1 style={{ width: "130px" }}>Nome</h1>
+                    <h1 style={{ width: '130px' }}>Nome</h1>
                   </div>
                 </td>
                 <td>
@@ -364,18 +368,20 @@ const Ficha: React.FC = () => {
                   </td>
                   <td>
                     <button
+                      type="button"
                       className="atributo"
                       onClick={(e) => {
-                        console.log("Foi");
+                        console.log('Foi');
                         e.preventDefault();
                       }}
                     />
                   </td>
                   <td>
                     <button
+                      type="button"
                       className="tipo"
                       onClick={(e) => {
-                        console.log("Foi");
+                        console.log('Foi');
                         e.preventDefault();
                       }}
                     />
@@ -385,18 +391,20 @@ const Ficha: React.FC = () => {
                   </td>
                   <td>
                     <button
+                      type="button"
                       className="atk"
                       onClick={(e) => {
-                        console.log("Foi");
+                        console.log('Foi');
                         e.preventDefault();
                       }}
                     />
                   </td>
                   <td>
                     <button
+                      type="button"
                       className="def"
                       onClick={(e) => {
-                        console.log("Foi");
+                        console.log('Foi');
                         e.preventDefault();
                       }}
                     />
@@ -417,7 +425,7 @@ const Ficha: React.FC = () => {
               <tr>
                 <td>
                   <div>
-                    <h1 style={{ width: "150px" }}>Nome (Valor Inicial)</h1>
+                    <h1 style={{ width: '150px' }}>Nome (Valor Inicial)</h1>
                   </div>
                 </td>
                 <td>
@@ -443,9 +451,10 @@ const Ficha: React.FC = () => {
                   </td>
                   <td>
                     <button
+                      type="button"
                       className="atributo"
                       onClick={(e) => {
-                        console.log("Foi");
+                        console.log('Foi');
                         e.preventDefault();
                       }}
                     />
@@ -455,9 +464,10 @@ const Ficha: React.FC = () => {
                   </td>
                   <td>
                     <button
+                      type="button"
                       className="tipo"
                       onClick={(e) => {
-                        console.log("Foi");
+                        console.log('Foi');
                         e.preventDefault();
                       }}
                     />
@@ -598,7 +608,7 @@ const Ficha: React.FC = () => {
             </div>
           </Stats>
           <Protecoes>
-            <span></span>
+            <span />
             <div>
               <label htmlFor="">1</label>
               <input type="text" id="" />
@@ -609,7 +619,8 @@ const Ficha: React.FC = () => {
                   const novoEstado = estado;
                   if (e.target.value) {
                     novoEstado.protecoes.armaduara1.value = parseInt(
-                      e.target.value
+                      e.target.value,
+                      10,
                     );
                   }
                   setEstado(novoEstado);
@@ -626,7 +637,8 @@ const Ficha: React.FC = () => {
                   const novoEstado = estado;
                   if (e.target.value) {
                     novoEstado.protecoes.armaduara2.value = parseInt(
-                      e.target.value
+                      e.target.value,
+                      10,
                     );
                   }
                   setEstado(novoEstado);
@@ -643,7 +655,8 @@ const Ficha: React.FC = () => {
                   const novoEstado = estado;
                   if (e.target.value) {
                     novoEstado.protecoes.escudo.value = parseInt(
-                      e.target.value
+                      e.target.value,
+                      10,
                     );
                   }
                   setEstado(novoEstado);
@@ -660,7 +673,8 @@ const Ficha: React.FC = () => {
                   const novoEstado = estado;
                   if (e.target.value) {
                     novoEstado.protecoes.outros.value = parseInt(
-                      e.target.value
+                      e.target.value,
+                      10,
                     );
                   }
                   setEstado(novoEstado);
@@ -674,7 +688,7 @@ const Ficha: React.FC = () => {
               <tr>
                 <td>
                   <div>
-                    <header style={{ padding: "10px", width: "400px" }}>
+                    <header style={{ padding: '10px', width: '400px' }}>
                       Aprimoramentos
                     </header>
                   </div>

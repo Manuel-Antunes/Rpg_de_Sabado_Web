@@ -1,6 +1,6 @@
-import React, { InputHTMLAttributes } from "react";
-import { Container } from "./styles";
-import { Input } from "@rocketseat/unform";
+import React, { InputHTMLAttributes } from 'react';
+import { Input } from '@rocketseat/unform';
+import { Container } from './styles';
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   labelContent: string;
@@ -8,7 +8,11 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
 }
 
-const FormGroup: React.FC<InputProps> = ({ labelContent, type, name }) => {
+const FormGroup: React.FC<InputProps> = ({
+  labelContent,
+  type,
+  name,
+}: InputProps) => {
   return (
     <Container>
       <label htmlFor={name}>{labelContent}</label>

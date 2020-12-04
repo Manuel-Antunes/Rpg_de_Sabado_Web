@@ -1,6 +1,8 @@
-import { Reducer } from "redux";
-import { UserState } from "./types";
-import { AuthTypes } from "../auth/types";
+/* eslint-disable no-console */
+import { Reducer } from 'redux';
+import { UserState } from './types';
+import { AuthTypes } from '../auth/types';
+
 const INITIAL_STATE: UserState = {
   data: {},
 };

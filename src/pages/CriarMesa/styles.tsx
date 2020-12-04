@@ -14,8 +14,6 @@ export const Container = styled.div`
       }
     }
   }
-
-  
 `;
 
 export const Form = styled.div`
@@ -38,6 +36,6 @@ export const Form = styled.div`
   div {
     display: flex;
     flex-direction: column;
-    width: 100%
+    width: 100%;
   }
 `;

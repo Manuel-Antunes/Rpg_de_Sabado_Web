@@ -1,5 +1,5 @@
-import { action } from "typesafe-actions";
-import { RepositoriesState, Repositorie, RepositoriesTypes } from "./types";
+import { action } from 'typesafe-actions';
+import { RepositoriesState, Repositorie, RepositoriesTypes } from './types';
 
 export const loadRequest = () => action(RepositoriesTypes.LOAD_REQUEST);
 
