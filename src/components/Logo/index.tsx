@@ -5,10 +5,6 @@ import dice from "../../resources/images/baixados.png";
 import { Container } from "./styles";
 
 const Logo: React.FC = () => {
-  const [states, setSta] = useState({ click: "" });
-  useEffect(() => {
-    console.log(states.click);
-  });
   return (
     <Container id="logo_top">
       <img src={dice} alt="dice" id="dice" />

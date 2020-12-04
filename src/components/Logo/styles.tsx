@@ -23,6 +23,7 @@ const grow = keyframes`
 export const Container = styled.div`
   display: inline-block;
   @import url("https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap");
+  
   position: relative;
   h1 {
     text-align: center;
