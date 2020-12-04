@@ -1,9 +1,12 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable react/style-prop-object */
 import React from 'react';
 
 import MainHeader from '../../components/MainHeader';
+import TextInput from '../../components/TextInput';
+import SubmitButton from '../../components/SubmitButton';
 import dice from '../../resources/images/baixados.png';
 import ded from '../../resources/images/dungeons.png';
+import pupkin from '../../resources/images/jack-o-lantern.png';
 
 import { Container, Form } from './styles';
 
@@ -18,26 +21,22 @@ const CriarMesa: React.FC = () => {
       </div>
 
       <Form>
-        {/* criar componentes de label + input */}
         <img src={ded} alt="ded" />
         <div>
-          <label>Nome da Mesa</label>
-          <input type="text" name="nomeDaMesa" />
-          <label>Sistema</label>
-          <input type="text" name="sistema" />
-          <div>
-            <div>
-              <label>Versão</label>
-              <input type="text" name="sistema" />
-            </div>
-            <div>
-              <label>Nº de participantes</label>
-              <input type="text" name="sistema" />
-            </div>
+          <TextInput>Nome da Mesa</TextInput>
+          <TextInput>Sistema</TextInput>
+          <div style={{ flexDirection: 'row' }}>
+            <TextInput>Versão</TextInput>
+            <TextInput>Nº de participantes</TextInput>
           </div>
-          <label>Descrição</label>
-          <textarea name="" cols={30} rows={10} />
+          <div style={{ padding: '1rem' }}>
+            <label>Descrição</label>
+            <textarea name="" cols={30} rows={10} />
+          </div>
+
+          <SubmitButton>Criar</SubmitButton>
         </div>
+        <img src={pupkin} alt="pupkin" />
       </Form>
     </Container>
   );
