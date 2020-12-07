@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { call, put } from 'redux-saga/effects';
 import api from '../../../services/api';
 

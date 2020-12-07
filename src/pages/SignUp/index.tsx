@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import React from 'react';
-import { Form, SubmitHandler } from '@rocketseat/unform';
+import { Form } from '@rocketseat/unform';
 import { Link } from 'react-router-dom';
 
 import { toast } from 'react-toastify';
@@ -11,11 +11,11 @@ import SubmitButton from '../../components/SubmitButton';
 import GoogleButton from '../../components/GoogleButton';
 import firebase from '../../services/firebase';
 
-interface formType {
-  email: string;
-  login: string;
-  password: string;
-}
+// interface formType {
+//   email: string;
+//   login: string;
+//   password: string;
+// }
 
 const SignUp: React.FC = () => {
   return (

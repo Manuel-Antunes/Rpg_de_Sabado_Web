@@ -3,7 +3,8 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100%;
+
+  margin-top: 2rem;
 
   align-items: center;
 `;
@@ -19,7 +20,8 @@ export const Form = styled.div`
   height: 90rem;
   border-radius: 4px;
 
-  padding: 15rem 4rem 2rem 4rem;
+  margin-bottom: 10rem;
+  padding: 8rem 4rem 2rem 4rem;
   margin-top: 15rem;
 
   background-color: #141419;

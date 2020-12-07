@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import jackO from '../../resources/images/jack-o-lantern.png';
 import dice from '../../resources/images/baixados.png';
 

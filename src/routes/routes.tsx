@@ -17,8 +17,7 @@ const Routes: React.FC = () => {
       <Route path="/ficha" component={Ficha} />
       <Route path="/" exact component={Dashboard} isPrivate />
       <Route path="/mesa/:id" component={Mesa} isPrivate />
-      <Route path="/criarmesa" component={CriarMesa} />{' '}
-      {/* Colocar com private quando estiver pronta */}
+      <Route path="/criarmesa" component={CriarMesa} isPrivate />
       <Route path="/game/:id" component={Game} isPrivate />
     </Switch>
   );

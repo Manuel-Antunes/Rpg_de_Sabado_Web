@@ -1,11 +1,12 @@
-/* eslint-disable no-console */
 /* eslint-disable require-yield */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable no-console */
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-import { takeLatest, call, put, all } from 'redux-saga/effects';
+import { call, put } from 'redux-saga/effects';
 import { toast } from 'react-toastify';
 import api from '../../../services/api';
 import history from '../../../services/history';
-import { signFailure, signInRequest, signInSucess } from './actions';
+import { signFailure, signInSucess } from './actions';
 import { User } from '../user/types';
 
 export function* signIn({ payload }: any) {

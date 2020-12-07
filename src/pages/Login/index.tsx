@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable no-console */
 import React from 'react';
 import { Form } from '@rocketseat/unform';
 import { Link } from 'react-router-dom';

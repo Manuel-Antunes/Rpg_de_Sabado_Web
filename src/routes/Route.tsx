@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import React, { InputHTMLAttributes } from 'react';
+import React from 'react';
 import { Route, Redirect, RouteProps } from 'react-router-dom';
 import { store } from '../tsstore';
 
