@@ -28,7 +28,7 @@ export const Container = styled.div`
   h1 {
     text-align: center;
     font-family: 'Henny Penny', cursive;
-    font-size: 7em;
+    font-size: 7rem;
     z-index: 1;
     color: #e65100;
     line-height: 120%;
@@ -37,29 +37,29 @@ export const Container = styled.div`
     }
   }
   #dice {
-    max-width: 130px;
-    max-height: 160px;
+    max-width: 10rem;
+    max-height: 16rem;
     position: absolute;
     z-index: -1;
-    left: -60px;
+    left: -5rem;
     animation: ${grow} 1s linear infinite;
     bottom: -15px;
   }
   #jack {
     z-index: -1;
-    max-width: 170px;
-    max-height: 190px;
+    max-width: 10rem;
+    max-height: 16rem;
     position: absolute;
-    right: -100px;
-    bottom: -35px;
+    right: -5rem;
+    bottom: -1.5rem;
     width: auto;
     height: auto;
     animation: ${grow} 1s linear infinite;
   }
   h3 {
     font-size: 1.5rem;
-    right: -160px;
-    bottom: -50px;
+    right: -16rem;
+    bottom: -5rem;
     transform: rotate(-20deg);
     animation: ${rotate} 1s linear alternate infinite;
     color: #e65100;

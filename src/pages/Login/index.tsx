@@ -48,13 +48,13 @@ const Login: React.FC = () => {
         <FormGroup labelContent="Password" type="password" name="password" />
         <div className="buttons">
           <GoogleButton />
-          <SubmitButton>Roll</SubmitButton>
+          <SubmitButton>Roll!</SubmitButton>
           <span />
         </div>
       </Form>
       <div className="footer">
         <div>
-          <h4>Doesn&#39t have an account?</h4>
+          <h4>Doesn&apos;t have an account?</h4>
         </div>
         <div>
           <Link to="/register">Sign Up</Link>

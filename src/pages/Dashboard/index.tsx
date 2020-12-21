@@ -12,7 +12,13 @@ import daemon from '../../resources/images/Daemon.png';
 import updateB from '../../resources/images/XD/update.png';
 import deleteB from '../../resources/images/XD/delete.png';
 import dice from '../../resources/images/baixados.png';
-import { Container, TableList } from './styles';
+import {
+  Container,
+  FormControl,
+  LogOutButton,
+  TableList,
+  UserContainer,
+} from './styles';
 import MainHeader from '../../components/MainHeader';
 import { User } from '../../tsstore/ducks/user/types';
 import { ApplicationState } from '../../tsstore';
@@ -138,8 +144,8 @@ const Dashboard: React.FC = () => {
         <h1>Mesas</h1>
         <img src={dice} alt="dice" />
       </MainHeader>
-      <div className="form-goup">
-        <label htmlFor="table_finder">Minhas Mesas</label>
+      <FormControl>
+        <label htmlFor="table_finder">Entrar em uma mesa</label>
         <input
           type="text"
           id="table_finder"
@@ -161,15 +167,11 @@ const Dashboard: React.FC = () => {
         >
           Join
         </button>
-      </div>
-      <div className="userContainer">
-        <img
-          src={user?.photoURL ? user.photoURL : ''}
-          style={{ width: '100px', height: '100px' }}
-          alt=""
-        />
+      </FormControl>
+      <UserContainer>
+        <img src={user?.photoURL ? user.photoURL : ''} alt="" />
         <label>{user?.displayName}</label>
-      </div>
+      </UserContainer>
       <section>
         <h3>Minhas Mesas</h3>
         <TableList>
@@ -201,9 +203,9 @@ const Dashboard: React.FC = () => {
           ))}
         </TableList>
       </section>
-      <button type="button" className="logout" onClick={handleLogout}>
+      <LogOutButton type="button" onClick={handleLogout}>
         LogOut
-      </button>
+      </LogOutButton>
     </Container>
   );
 };

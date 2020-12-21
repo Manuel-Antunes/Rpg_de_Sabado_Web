@@ -323,7 +323,7 @@ const Ficha: React.FC = () => {
               <tr>
                 <td>
                   <div>
-                    <h1 style={{ width: '130px' }}>Nome</h1>
+                    <h1 style={{ width: '13rem' }}>Nome</h1>
                   </div>
                 </td>
                 <td>
@@ -426,7 +426,7 @@ const Ficha: React.FC = () => {
               <tr>
                 <td>
                   <div>
-                    <h1 style={{ width: '150px' }}>Nome (Valor Inicial)</h1>
+                    <h1 style={{ width: '15rem' }}>Nome (Valor Inicial)</h1>
                   </div>
                 </td>
                 <td>
@@ -689,7 +689,7 @@ const Ficha: React.FC = () => {
               <tr>
                 <td>
                   <div>
-                    <header style={{ padding: '10px', width: '400px' }}>
+                    <header style={{ padding: '1rem', width: '40rem' }}>
                       Aprimoramentos
                     </header>
                   </div>

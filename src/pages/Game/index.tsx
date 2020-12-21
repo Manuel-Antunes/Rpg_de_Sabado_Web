@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
@@ -77,8 +78,8 @@ const Game: React.FC = () => {
       <Categorias>
         <span>Fichas</span>
         <ul>
-          {categorias.map((element) => (
-            <li>
+          {categorias.map((element, index) => (
+            <li key={`${index}${element.name}`}>
               <span>{element.name}</span>
               <Fichas>
                 {element.fichas.map((ficha) => (

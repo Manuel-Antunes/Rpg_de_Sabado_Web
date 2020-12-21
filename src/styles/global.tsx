@@ -31,9 +31,9 @@ export default createGlobalStyle`
         font: 14px sans-serif;
     }
     #root {
-        /* max-width: 1020px; */
+        /* max-width: 102rem */
         margin: 0 auto;
-        padding: 0 20px 50px;
+        padding: 0 2rem 5rem;
     }
     button {
         cursor: pointer;

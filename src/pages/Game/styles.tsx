@@ -17,14 +17,14 @@ export const Categorias = styled.div`
     background-color: #141419;
     li {
       span {
-        margin-left: 20px;
+        margin-left: 2rem;
         color: #e65100;
-        font-size: 30px;
+        font-size: 3rem;
       }
     }
   }
   span {
-    font-size: 50px;
+    font-size: 5rem;
     color: #e65100;
     text-align: center;
     font-family: 'Kalam', cursive;
@@ -32,7 +32,7 @@ export const Categorias = styled.div`
 `;
 export const Main = styled.div`
   .wrapper {
-    height: 550px;
+    height: 55rem;
 
     overflow: auto;
     overflow-y: scroll;
@@ -50,14 +50,14 @@ export const Main = styled.div`
     border-bottom: 3px solid#2F2F3B;
     li {
       padding: 4px 0;
-      padding-right: 80px;
+      padding-right: 8rem;
       background-color: #141419;
       border: 3px solid #2f2f3b;
       border-bottom: none;
-      margin-left: 10px;
+      margin-left: 1rem;
 
       span {
-        font-size: 20px;
+        font-size: 2rem;
         cursor: default;
         color: #e65100;
       }
@@ -73,7 +73,7 @@ export const Jogadores = styled.div`
   ul {
     width: 100%;
     li > * {
-      padding: 5px 10px;
+      padding: 5px 1rem;
     }
     li {
       display: flex;
@@ -82,16 +82,16 @@ export const Jogadores = styled.div`
       .profile {
         display: flex;
         align-items: center;
-        font-size: 20px;
+        font-size: 2rem;
         background-color: #141419;
         color: #e65100;
         img {
-          margin-right: 10px;
+          margin-right: 1rem;
           border-radius: 50%;
-          width: 50px;
+          width: 5rem;
         }
         span {
-          font-size: 20px;
+          font-size: 2rem;
           text-shadow: -1px 0 #191920, 0 1px #191920, 1px 0 #191920,
             0 -1px #191920;
         }
@@ -99,7 +99,7 @@ export const Jogadores = styled.div`
     }
   }
   span {
-    font-size: 50px;
+    font-size: 5rem;
     color: #e65100;
     text-align: center;
     font-family: 'Kalam', cursive;
@@ -118,7 +118,7 @@ export const MenuBar = styled.div`
 `;
 export const Fichas = styled.ul`
   li > * {
-    margin-left: 30px;
+    margin-left: 3rem;
   }
   li {
     margin: 0 4px;
@@ -130,12 +130,12 @@ export const Fichas = styled.ul`
     display: flex;
     align-items: center;
     img {
-      width: 30px;
+      width: 3rem;
       border-radius: 50%;
     }
     label {
       color: #e65100;
-      font-size: 20px;
+      font-size: 2rem;
       text-shadow: -1px 0 #191920, 0 1px #191920, 1px 0 #191920, 0 -1px #191920;
     }
   }
@@ -162,7 +162,7 @@ export const Dices = styled.div`
     }
   }
   span {
-    font-size: 50px;
+    font-size: 5rem;
     color: #e65100;
     text-align: center;
     font-family: 'Kalam', cursive;

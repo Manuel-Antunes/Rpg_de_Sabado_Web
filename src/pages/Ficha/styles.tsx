@@ -4,30 +4,30 @@ export const Container = styled.div`
   display: flex;
   background-color: #7159c1;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 2rem;
   justify-content: space-between;
   #profile {
     background: #fff;
-    width: 300px;
-    height: 300px;
+    width: 30rem;
+    height: 30rem;
   }
 `;
 export const Cabecalho = styled.div`
   @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 40px;
-  max-width: 600px;
+  grid-gap: 4rem;
+  max-width: 60rem;
   font-family: 'Kalam', cursive;
   div {
-    font-size: 20px;
+    font-size: 2rem;
     display: flex;
     flex-direction: column-reverse;
     label {
       font-weight: bold;
     }
     input {
-      height: 20px;
+      height: 2rem;
       width: 120%;
       background: none;
       border: none;
@@ -45,7 +45,7 @@ export const Cabecalho = styled.div`
 export const Descricao = styled.div`
   @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
   display: flex;
-  max-width: 500px;
+  max-width: 50rem;
   flex-direction: column;
   align-items: center;
   header {
@@ -55,24 +55,24 @@ export const Descricao = styled.div`
     text-align: center;
     color: #fff;
     font-weight: bold;
-    padding: 10px;
-    font-size: 30px;
+    padding: 1rem;
+    font-size: 3rem;
   }
   .content {
     div {
-      margin-right: 10px;
+      margin-right: 1rem;
     }
-    max-width: 540px;
+    max-width: 54rem;
     display: flex;
     flex-wrap: wrap;
     color: #fff;
-    font-size: 20px;
+    font-size: 2rem;
     label {
       font-weight: bold;
     }
     font-family: 'Kalam', cursive;
     input {
-      margin-left: 10px;
+      margin-left: 1rem;
       border: none;
       width: auto;
       border-bottom: 1px solid #fff;
@@ -86,7 +86,7 @@ export const Experiencia = styled.div`
   @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
   display: flex;
   flex-direction: column;
-  max-width: 500px;
+  max-width: 50rem;
   header {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #191920;
@@ -94,17 +94,17 @@ export const Experiencia = styled.div`
     text-align: center;
     color: #fff;
     font-weight: bold;
-    padding: 10px;
-    font-size: 30px;
+    padding: 1rem;
+    font-size: 3rem;
   }
   .content {
-    max-width: 540px;
+    max-width: 54rem;
     display: flex;
     color: #fff;
     flex-direction: column;
-    font-size: 20px;
+    font-size: 2rem;
     div {
-      margin-right: 10px;
+      margin-right: 1rem;
     }
     label {
       float: left;
@@ -123,7 +123,8 @@ export const Experiencia = styled.div`
 
 export const PericiasComArmas = styled.table`
   font-family: 'Kalam', cursive;
-  width: 420px;
+  width: 42rem;
+
   header {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #191920;
@@ -132,9 +133,10 @@ export const PericiasComArmas = styled.table`
     color: #fff;
     font-weight: bold;
     font-size: 25px;
+
     h1 {
       font-weight: bold;
-      font-size: 20px;
+      font-size: 2rem;
     }
   }
   tr {
@@ -163,14 +165,14 @@ export const PericiasComArmas = styled.table`
   }
 `;
 export const Attributes = styled.table`
-  max-width: 600px;
+  max-width: 60rem;
   tr {
     td {
       & + td {
-        padding-top: 10px;
+        padding-top: 1rem;
       }
       & + td {
-        padding-left: 20px;
+        padding-left: 2rem;
       }
       div {
         display: flex;
@@ -187,7 +189,7 @@ export const Attributes = styled.table`
       }
       input {
         height: 55px;
-        width: 60px;
+        width: 6rem;
         text-align: center;
         &::-webkit-outer-spin-button,
         &::-webkit-inner-spin-button {
@@ -209,7 +211,7 @@ export const Stats = styled.div`
       color: #fff;
       align-self: flex-end;
       padding: 3px;
-      width: 150px;
+      width: 15rem;
       background-color: #191920;
       h2 {
         font-weight: bold;
@@ -230,9 +232,9 @@ export const Stats = styled.div`
       input {
         text-align: center;
         font-family: 'Henny Penny', cursive;
-        font-size: 20px;
-        height: 50px;
-        width: 80px;
+        font-size: 2rem;
+        height: 5rem;
+        width: 8rem;
       }
       input[type='number'] {
         &::-webkit-outer-spin-button,
@@ -249,7 +251,7 @@ export const Protecoes = styled.div`
   flex-direction: column;
   label {
     font-family: 'Henny Penny', cursive;
-    font-size: 30px;
+    font-size: 3rem;
   }
   h4 {
     font-family: 'Kalam', cursive;
@@ -262,7 +264,7 @@ export const Protecoes = styled.div`
     border: none;
     background: none;
     width: 200%;
-    padding: 2px 20px;
+    padding: 2px 2rem;
     border-bottom: 1px solid #191920;
   }
   input[type='number'] {
