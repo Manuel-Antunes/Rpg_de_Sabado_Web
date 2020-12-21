@@ -3,15 +3,20 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 import firebase from 'firebase';
+import { ImExit } from 'react-icons/im';
+import { IoMdCloseCircleOutline } from 'react-icons/io';
+import { Link } from 'react-router-dom';
 import {
   Container,
   Fichas,
+  GameDiv,
   Jogadores,
   Main,
   MenuBar,
   Categorias,
   Chat,
   Dices,
+  Title,
 } from './styles';
 import Ficha from '../Ficha';
 import legolas from '../../resources/images/legolas.jpg';
@@ -75,123 +80,117 @@ const Game: React.FC = () => {
   ]);
   return (
     <Container>
-      <Categorias>
-        <span>Fichas</span>
-        <ul>
-          {categorias.map((element, index) => (
-            <li key={`${index}${element.name}`}>
-              <span>{element.name}</span>
-              <Fichas>
-                {element.fichas.map((ficha) => (
-                  <li>
-                    <img src={ficha.image} alt="" />
-                    <label htmlFor="">{ficha.name}</label>
-                  </li>
-                ))}
-              </Fichas>
-            </li>
-          ))}
-        </ul>
-      </Categorias>
-      <Main>
-        <ul>
-          {guias.map((guia) => (
-            <li>
-              <span>{guia.nome}</span>
-            </li>
-          ))}
-        </ul>
-        <div className="wrapper">
-          <Ficha />
-        </div>
-      </Main>
-      <Jogadores>
-        <span>Jogadores</span>
-        <ul>
-          {jogadores?.map((u) => (
-            <li>
-              <div className="profile">
-                <img src={u?.photoURL ? u?.photoURL : ''} alt="" />
-                <span>{getMinNome(u?.displayName ? u?.displayName : '')}</span>
-              </div>
-              <div className="campos" />
-            </li>
-          ))}
-        </ul>
-      </Jogadores>
-      <MenuBar>
-        <Dices>
-          <span>Rolar Dado</span>
-
-          <div className="dices">
-            <button type="button">
-              <img src={d4} alt="" />
-              <span>D4</span>
-            </button>
-            <button type="button">
-              <img src={d6} alt="" />
-              <span>D6</span>
-            </button>
-            <button type="button">
-              <img src={d8} alt="" />
-              <span>D8</span>
-            </button>
-            <button type="button">
-              <img src={d10} alt="" />
-              <span>D10</span>
-            </button>
-            <button type="button">
-              <img src={d12} alt="" />
-              <span>D12</span>
-            </button>
-            <button type="button">
-              <img src={d20} alt="" />
-              <span>D20</span>
-            </button>
-            <button type="button">
-              <img src={d100} alt="" />
-              <span>D100</span>
-            </button>
-          </div>
-        </Dices>
-        <button type="button">
+      <Title>
+        <div>
           <img src={mesa.logo} alt="" />
-        </button>
-        <Dices>
-          <span>Rolar Dado</span>
-
-          <div className="dices">
-            <button type="button">
-              <img src={d4} alt="" />
-              <span>D4</span>
-            </button>
-            <button type="button">
-              <img src={d6} alt="" />
-              <span>D6</span>
-            </button>
-            <button type="button">
-              <img src={d8} alt="" />
-              <span>D8</span>
-            </button>
-            <button type="button">
-              <img src={d10} alt="" />
-              <span>D10</span>
-            </button>
-            <button type="button">
-              <img src={d12} alt="" />
-              <span>D12</span>
-            </button>
-            <button type="button">
-              <img src={d20} alt="" />
-              <span>D20</span>
-            </button>
-            <button type="button">
-              <img src={d100} alt="" />
-              <span>D100</span>
-            </button>
+          <h1>{mesa.nome}</h1>
+        </div>
+        <Link to="/">
+          <ImExit size={25} color="#e65100" />
+        </Link>
+      </Title>
+      <GameDiv>
+        <Categorias>
+          <span>Fichas</span>
+          <ul>
+            {categorias.map((element, index) => (
+              <li key={`${index}${element.name}`}>
+                <span>{element.name}</span>
+                <Fichas>
+                  {element.fichas.map((ficha) => (
+                    <li>
+                      <img src={ficha.image} alt="" />
+                      <label htmlFor="">{ficha.name}</label>
+                    </li>
+                  ))}
+                </Fichas>
+              </li>
+            ))}
+          </ul>
+        </Categorias>
+        <Main>
+          <ul>
+            {guias.map((guia) => (
+              <li>
+                <span>{guia.nome}</span>
+                <IoMdCloseCircleOutline size={20} />
+              </li>
+            ))}
+          </ul>
+          <div>
+            <Ficha />
           </div>
-        </Dices>
-      </MenuBar>
+        </Main>
+        <Jogadores>
+          <span>Jogadores</span>
+          <ul>
+            {jogadores?.map((u) => (
+              <li>
+                <div className="profile">
+                  <img src={u?.photoURL ? u?.photoURL : ''} alt="" />
+                  <span>
+                    {getMinNome(u?.displayName ? u?.displayName : '')}
+                  </span>
+                </div>
+                <div className="campos">
+                  <span>Campos</span>
+                  <p>HP</p>
+                  <progress max={100} value={50} />
+                  <p>SP</p>
+                  <progress max={100} value={50} />
+                </div>
+              </li>
+            ))}
+          </ul>
+        </Jogadores>
+        <MenuBar>
+          <Dices>
+            <span>Rolar Dado</span>
+
+            <div>
+              <button type="button">
+                <img src={d4} alt="" />
+                <span>D4</span>
+              </button>
+              <button type="button">
+                <img src={d6} alt="" />
+                <span>D6</span>
+              </button>
+              <button type="button">
+                <img src={d8} alt="" />
+                <span>D8</span>
+              </button>
+              <button type="button">
+                <img src={d10} alt="" />
+                <span>D10</span>
+              </button>
+              <button type="button">
+                <img src={d12} alt="" />
+                <span>D12</span>
+              </button>
+              <button type="button">
+                <img src={d20} alt="" />
+                <span>D20</span>
+              </button>
+              <button type="button">
+                <img src={d100} alt="" />
+                <span>D100</span>
+              </button>
+            </div>
+          </Dices>
+          <button type="button">
+            <img src={mesa.logo} alt="" />
+          </button>
+          <Chat>
+            <div>
+              <ul>
+                <li />
+              </ul>
+            </div>
+            <textarea name="message" id="message" placeholder="type here..." />
+          </Chat>
+        </MenuBar>
+      </GameDiv>
     </Container>
   );
 };
