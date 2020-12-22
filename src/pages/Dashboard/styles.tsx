@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { darken } from 'polished';
 
 export const Container = styled.div`
-  padding: 1rem 0 10rem 0;
+  padding: 1rem 0 0 0;
 
   display: flex;
   flex-direction: column;
@@ -91,7 +91,8 @@ export const FormControl = styled.div`
 export const TableList = styled.ul`
   overflow: auto;
   overflow-y: scroll;
-  height: 80vh;
+  max-width: 54rem;
+  max-height: 30rem;
   list-style: none;
   background: #141419;
 
@@ -102,7 +103,7 @@ export const TableList = styled.ul`
 
   &::-webkit-scrollbar-thumb {
     background: #e65100;
-    -webkit-box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.5);
   }
 
   li {
@@ -149,7 +150,6 @@ export const TableList = styled.ul`
     }
 
     div {
-      width: 15%;
       display: flex;
       justify-content: space-between;
     }

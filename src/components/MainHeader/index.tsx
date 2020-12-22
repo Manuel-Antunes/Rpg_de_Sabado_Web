@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { BaseHTMLAttributes } from 'react';
 
 import { Container } from './styles';
 
-const MainHeader: React.FC = ({ children }) => {
-  return <Container>{children}</Container>;
+interface MainHeaderProps extends BaseHTMLAttributes<HTMLDivElement> {
+  resize?: boolean;
+}
+
+const MainHeader: React.FC<MainHeaderProps> = ({ children, resize }) => {
+  return <Container resize={resize}>{children}</Container>;
 };
 
 export default MainHeader;

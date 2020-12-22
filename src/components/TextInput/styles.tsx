@@ -1,19 +1,28 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+interface ContainerProps {
+  width?: number;
+}
+
+export const Container = styled.div<ContainerProps>`
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 0.5rem;
+  ${(props) =>
+    props.width &&
+    css`
+      width: ${props.width}%;
+    `};
 
   label {
     font-family: cursive;
     font-style: italic;
     color: #e65100;
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
   }
 
   input {
-    height: 5rem;
+    height: 2.5rem;
   }
 `;

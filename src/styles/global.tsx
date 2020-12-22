@@ -5,19 +5,20 @@ import 'react-toastify/dist/ReactToastify.min.css';
 
 export default createGlobalStyle`
     *{
-        ::-webkit-scrollbar {
-            width: 5px;
-
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #191920;
-            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
-        }
         margin: 0;
         padding: 0;
         outline: 0;
         box-sizing: border-box;
         font-size: 62.5%;
+
+        ::-webkit-scrollbar {
+            width: 0.5rem;
+
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #191920;
+            box-shadow: inset 0 0 0.6rem rgba(0,0,0,0.5);
+        }
     }
     html,body, #root{
         height: 100%;
@@ -28,7 +29,7 @@ export default createGlobalStyle`
 
     }
     body, input, button{
-        font: 14px sans-serif;
+        font: 1.4rem sans-serif;
     }
     #root {
         /* max-width: 102rem */

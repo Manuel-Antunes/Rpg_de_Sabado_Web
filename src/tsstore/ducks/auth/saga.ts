@@ -4,9 +4,10 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { call, put } from 'redux-saga/effects';
 import { toast } from 'react-toastify';
+import { push } from 'connected-react-router';
 import api from '../../../services/api';
 import history from '../../../services/history';
-import { signFailure, signInSucess } from './actions';
+import { signFailure, signInSucess, signOutSuccess } from './actions';
 import { User } from '../user/types';
 
 export function* signIn({ payload }: any) {
@@ -23,19 +24,22 @@ export function* signIn({ payload }: any) {
     yield put(signInSucess(user));
 
     history.push('/');
+    yield put(push('/'));
   } catch (error) {
     yield put(signFailure());
     toast.error('Falha na autenticação, verifique seus dados');
   }
 }
 export function* setToken() {
-  history.push('/register');
+  yield call(history.push, '/register');
   console.log('jsadnaksn');
 
   api.defaults.headers.Authorization = `Bearer ${1}`;
 }
 
-export function signOut() {
-  console.log('sadhasdalskdnlasn');
-  history.push('/');
+export function* signOut({ payload }: any) {
+  payload.push('/');
+  console.log(payload);
+
+  yield put(signOutSuccess());
 }

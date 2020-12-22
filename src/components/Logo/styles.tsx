@@ -43,7 +43,7 @@ export const Container = styled.div`
     z-index: -1;
     left: -5rem;
     animation: ${grow} 1s linear infinite;
-    bottom: -15px;
+    bottom: -1.5rem;
   }
   #jack {
     z-index: -1;

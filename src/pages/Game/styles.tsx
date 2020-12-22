@@ -138,7 +138,7 @@ export const Main = styled.div`
 
   ul {
     display: flex;
-    border-bottom: 0.3rem solid#2F2F3B;
+    border-bottom: 0.3rem solid #2f2f3b;
 
     li {
       display: flex;
@@ -308,7 +308,7 @@ export const MenuBar = styled.div`
 
   button {
     width: 13rem;
-    height: 13rem;
+    height: 100%;
     background: #14141a;
     border: none;
 
@@ -328,7 +328,7 @@ export const Dices = styled.div`
   background: #111213;
 
   margin: 0.2rem;
-  border: 0.1rem solid #2f2f3b;
+  border: 0.1rem solid #707070;
 
   span {
     font-size: 2rem;
@@ -374,12 +374,46 @@ export const Chat = styled.div`
   flex-direction: column;
   flex: 1;
 
+  margin: 0.2rem;
+  border: 0.1rem solid #707070;
+
   div {
     display: flex;
     flex-direction: column;
     flex: 1;
 
-    background: #282b2d;
+    background: #2f2f3b;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      max-height: 11.6rem;
+      padding: 0.5rem 1rem;
+      overflow: auto;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        width: 5px;
+        background: ${darken(0.2, '#e65100')};
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #e65100;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+      }
+
+      li {
+        list-style: none;
+
+        span {
+          color: #e65100;
+          font-size: 1rem;
+          font-family: Roboto, sans-serif;
+        }
+      }
+    }
   }
 
   textarea {
@@ -387,5 +421,17 @@ export const Chat = styled.div`
     resize: none;
 
     background: #111213;
+    color: #e65100;
+    font-size: 1.5rem;
+    font-family: Roboto, sans-serif;
+
+    &::placeholder {
+      color: #e65100;
+      font-size: 1.5rem;
+      font-family: Roboto, sans-serif;
+    }
+
+    border: 0;
+    border-top: 0.1rem solid #2f2f3b;
   }
 `;

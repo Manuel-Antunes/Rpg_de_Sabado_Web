@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { InputHTMLAttributes } from 'react';
 
 import { Container } from './styles';
 
-const TextInput: React.FC = ({ children }) => {
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+  width?: number;
+}
+
+const TextInput: React.FC<InputProps> = ({ children, width }) => {
   return (
-    <Container>
+    <Container width={width}>
       <label>{children}</label>
       <input type="text" />
     </Container>

@@ -1,6 +1,10 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+interface ContainerProps {
+  resize?: boolean;
+}
+
+export const Container = styled.div<ContainerProps>`
   position: relative;
   padding: 3rem;
   display: flex;
@@ -8,7 +12,14 @@ export const Container = styled.div`
   align-items: center;
   h1 {
     color: #e65100;
-    font-size: 7rem;
+    ${(props) =>
+      props.resize
+        ? css`
+            font-size: 3rem;
+          `
+        : css`
+            font-size: 7rem;
+          `}
   }
   img {
     position: absolute;

@@ -11,7 +11,7 @@ export default function* rootSaga() {
   return yield all([
     takeLatest(RepositoriesTypes.LOAD_REQUEST, load),
     takeLatest(AuthTypes.SIGN_IN_REQUEST, auth.signIn),
-    takeLatest(AuthTypes.SIGN_OUT, auth.signOut),
+    takeLatest(AuthTypes.SIGN_OUT_REQUEST, auth.signOut),
     takeLatest(AuthTypes.SIGN_IN_SUCCESS, auth.setToken),
   ]);
 }

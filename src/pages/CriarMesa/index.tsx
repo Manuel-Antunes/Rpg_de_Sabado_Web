@@ -14,7 +14,7 @@ const CriarMesa: React.FC = () => {
   return (
     <Container>
       <div>
-        <MainHeader>
+        <MainHeader resize>
           <h1>Criar Mesa</h1>
           <img src={dice} alt="dado" />
         </MainHeader>
@@ -26,10 +26,10 @@ const CriarMesa: React.FC = () => {
           <TextInput>Nome da Mesa</TextInput>
           <TextInput>Sistema</TextInput>
           <div style={{ flexDirection: 'row' }}>
-            <TextInput>Versão</TextInput>
-            <TextInput>Nº de participantes</TextInput>
+            <TextInput width={50}>Versão</TextInput>
+            <TextInput width={50}>Nº de participantes</TextInput>
           </div>
-          <div style={{ padding: '1rem' }}>
+          <div style={{ padding: '0.5rem' }}>
             <label>Descrição</label>
             <textarea name="" cols={30} rows={10} />
           </div>

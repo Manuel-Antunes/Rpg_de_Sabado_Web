@@ -73,10 +73,113 @@ const Game: React.FC = () => {
   const [jogadores, setJogadores] = useState<
     Array<firebase.User | null | undefined>
   >([store.getState().user.data.user]);
-  const [guias, setGias] = useState([
+  const [guias, setGuias] = useState([
     { nome: 'ficha 1' },
     { nome: 'ficha 2' },
     { nome: 'ficha 3' },
+  ]);
+
+  const [messages, setMessages] = useState([
+    {
+      owner: 'Jorge',
+      text: 'pimba',
+      time: new Date().getTime(),
+    },
+    {
+      owner: 'Jorge',
+      text: 'pimba',
+      time: new Date().getTime(),
+    },
+    {
+      owner: 'Jorge',
+      text: 'pimba',
+      time: new Date().getTime(),
+    },
+    {
+      owner: 'Jorge',
+      text: 'pimba',
+      time: new Date().getTime(),
+    },
+    {
+      owner: 'Jorge',
+      text: 'pimba',
+      time: new Date().getTime(),
+    },
+    {
+      owner: 'Jorge',
+      text: 'pimba',
+      time: new Date().getTime(),
+    },
+    {
+      owner: 'Jorge',
+      text: 'pimba',
+      time: new Date().getTime(),
+    },
+    {
+      owner: 'Jorge',
+      text: 'pimba',
+      time: new Date().getTime(),
+    },
+    {
+      owner: 'Jorge',
+      text: 'pimba',
+      time: new Date().getTime(),
+    },
+    {
+      owner: 'Jorge',
+      text: 'pimba',
+      time: new Date().getTime(),
+    },
+    {
+      owner: 'Jorge',
+      text: 'pimba',
+      time: new Date().getTime(),
+    },
+    {
+      owner: 'Jorge',
+      text: 'pimba',
+      time: new Date().getTime(),
+    },
+    {
+      owner: 'Jorge',
+      text: 'pimba',
+      time: new Date().getTime(),
+    },
+    {
+      owner: 'Jorge',
+      text: 'pimba',
+      time: new Date().getTime(),
+    },
+    {
+      owner: 'Jorge',
+      text: 'pimba',
+      time: new Date().getTime(),
+    },
+    {
+      owner: 'Jorge',
+      text: 'pimba',
+      time: new Date().getTime(),
+    },
+    {
+      owner: 'Jorge',
+      text: 'pimba',
+      time: new Date().getTime(),
+    },
+    {
+      owner: 'Jorge',
+      text: 'pimba',
+      time: new Date().getTime(),
+    },
+    {
+      owner: 'Jorge',
+      text: 'pimba',
+      time: new Date().getTime(),
+    },
+    {
+      owner: 'Jorge',
+      text: 'pimba',
+      time: new Date().getTime(),
+    },
   ]);
   return (
     <Container>
@@ -184,10 +287,18 @@ const Game: React.FC = () => {
           <Chat>
             <div>
               <ul>
-                <li />
+                {messages.map((message) => (
+                  <li key={message.time}>
+                    <span>{`${message.owner}: ${message.text}`}</span>
+                  </li>
+                ))}
               </ul>
             </div>
-            <textarea name="message" id="message" placeholder="type here..." />
+            <textarea
+              name="message"
+              id="message"
+              placeholder="  type here..."
+            />
           </Chat>
         </MenuBar>
       </GameDiv>

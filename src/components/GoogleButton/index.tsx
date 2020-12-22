@@ -1,16 +1,17 @@
 /* eslint-disable no-console */
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router';
 import google from '../../resources/images/XD/google.svg';
 import firebase from '../../services/firebase';
 import { store } from '../../tsstore';
 import { AuthTypes } from '../../tsstore/ducks/auth/types';
 import { User } from '../../tsstore/ducks/user/types';
-import history from '../../services/history';
 // import { Container } from './styles';
 
 const GoogleButton: React.FC = () => {
   const dispatch = useDispatch();
+  const history = useHistory();
   return (
     <button
       type="button"

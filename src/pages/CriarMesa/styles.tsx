@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
 
-  margin-top: 2rem;
+  padding-top: 1rem;
 
   align-items: center;
 `;
@@ -16,59 +16,58 @@ export const Form = styled.div`
   align-items: start;
   flex-direction: column;
 
-  width: 70rem;
-  height: 90rem;
-  border-radius: 4px;
+  width: 35rem;
+  height: 45rem;
+  border-radius: 0.2rem;
 
-  margin-bottom: 10rem;
-  padding: 8rem 4rem 2rem 4rem;
-  margin-top: 15rem;
+  margin-top: 5rem;
+  padding: 4rem 2rem 1rem 2rem;
 
   background-color: #141419;
 
   img {
-    width: 22rem;
+    width: 11rem;
     position: absolute;
-    top: -12rem;
-    left: 25rem;
+    top: -3rem;
+    left: 12.5rem;
     border-radius: 50%;
   }
 
   div {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    max-width: 100%;
     justify-content: center;
 
     label {
       font-family: cursive;
       font-style: italic;
       color: #e65100;
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+      margin-bottom: 0.25rem;
     }
 
     textarea {
-      padding: 1rem;
-      height: 25rem;
+      padding: 0.5rem;
+      height: 12.5rem;
     }
 
     button {
-      width: 22rem;
-      height: 6.5rem;
-      font-size: 3rem;
+      width: 11rem;
+      height: 3.25rem;
+      font-size: 1.5rem;
       position: absolute;
       justify-self: center;
-      left: 25rem;
-      bottom: -3rem;
+      left: 12.5rem;
+      bottom: -1.5rem;
     }
   }
 
   div + img {
     position: unset;
-    width: 4rem;
+    width: 2rem;
     border-radius: unset;
     align-self: flex-end;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
 `;

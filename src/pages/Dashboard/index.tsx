@@ -4,7 +4,7 @@
 /* eslint-disable no-console */
 import React, { useEffect, useState, ChangeEvent } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import ded from '../../resources/images/dungeons.png';
 import cyber from '../../resources/images/cyberpunk.png';
@@ -22,8 +22,8 @@ import {
 import MainHeader from '../../components/MainHeader';
 import { User } from '../../tsstore/ducks/user/types';
 import { ApplicationState } from '../../tsstore';
-import { AuthTypes } from '../../tsstore/ducks/auth/types';
 import { Game } from '../../types';
+import { signOutRequest } from '../../tsstore/ducks/auth/actions';
 
 interface OwnProps {
   data: User;
@@ -31,10 +31,9 @@ interface OwnProps {
 
 const Dashboard: React.FC = () => {
   const dispatch = useDispatch();
+  const history = useHistory();
   const user = useSelector((state: ApplicationState) => state.user.data.user);
-  function handleLogout() {
-    dispatch({ type: AuthTypes.SIGN_OUT });
-  }
+
   console.log(user);
   const [mesas, setMesas] = useState<Game[]>([]);
   const [finder, setFinder] = useState('');
@@ -181,10 +180,10 @@ const Dashboard: React.FC = () => {
                 <img className="logo" src={game.logo} alt={game.nome} />
               </button>
               <Link to={`/game/${game.id}`}>{game.nome}</Link>
-              <span>
-                {game.players}/{game.maxPlayers}
-              </span>
               <div>
+                <span>
+                  {game.players}/{game.maxPlayers}
+                </span>
                 <span>
                   <Link to="/mesa/">
                     <img src={updateB} alt="update" />
@@ -203,7 +202,10 @@ const Dashboard: React.FC = () => {
           ))}
         </TableList>
       </section>
-      <LogOutButton type="button" onClick={handleLogout}>
+      <LogOutButton
+        type="button"
+        onClick={() => dispatch(signOutRequest(history))}
+      >
         LogOut
       </LogOutButton>
     </Container>

@@ -20,5 +20,3 @@ const Logo: React.FC = () => {
 };
 
 export default Logo;
-
-// im here, bitch ja
