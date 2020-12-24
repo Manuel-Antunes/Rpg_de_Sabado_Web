@@ -20,10 +20,11 @@ export const Container = styled.div<ContainerProps>`
         : css`
             font-size: 7rem;
           `}
+    z-index: -1;
   }
   img {
     position: absolute;
     height: 100%;
-    z-index: -1;
+    z-index: -2;
   }
 `;

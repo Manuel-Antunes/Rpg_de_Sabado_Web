@@ -6,6 +6,7 @@ export const Container = styled.div`
   align-items: center;
   padding: 4rem 0 0 0;
   justify-content: center;
+
   form {
     margin-top: 6rem;
     .buttons {
@@ -13,23 +14,30 @@ export const Container = styled.div`
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
+
       span {
         width: 6rem;
       }
     }
   }
+
   .footer {
     margin-top: 7rem;
     display: flex;
     justify-content: space-between;
     width: 83%;
+
     h4 {
       color: #707070;
+      font-size: 3rem;
     }
+
     a {
       text-decoration: none;
       color: #e65100;
+      font-size: 3.4rem;
     }
+
     font-size: 4.5rem;
     max-width: 50rem;
     font-family: 'Kalam';
@@ -40,5 +48,5 @@ export const MeuBotao = styled.button`
   width: 9rem;
   height: 5rem;
   background-color: #fff;
-  border: 1px black solid;
+  border: 0.1rem black solid;
 `;

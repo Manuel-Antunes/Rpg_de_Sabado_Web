@@ -67,7 +67,7 @@ export const Categorias = styled.div`
 
   &::-webkit-scrollbar-thumb {
     background: #e65100;
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.5);
   }
 
   span {
@@ -127,7 +127,8 @@ export const Fichas = styled.ul`
     label {
       color: #e65100;
       font-size: 1.5rem;
-      text-shadow: -1px 0 #191920, 0 1px #191920, 1px 0 #191920, 0 -1px #191920;
+      text-shadow: -0.1rem 0 #191920, 0 0.1rem #191920, 0.1rem 0 #191920,
+        0 -0.1rem #191920;
     }
   }
 `;
@@ -192,7 +193,7 @@ export const Main = styled.div`
 
     &::-webkit-scrollbar-thumb {
       background: #e65100;
-      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+      box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.5);
     }
   }
 `;
@@ -224,16 +225,16 @@ export const Jogadores = styled.div`
 
     &::-webkit-scrollbar-thumb {
       background: #e65100;
-      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+      box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.5);
     }
 
     li > * {
-      padding: 5px 1rem;
+      padding: 0.5rem 1rem;
     }
 
     li {
       display: flex;
-      border: solid 1px #707070;
+      border: solid 0.1rem #707070;
       width: 100%;
       justify-content: space-between;
 
@@ -252,8 +253,8 @@ export const Jogadores = styled.div`
 
         span {
           font-size: 1.5rem;
-          text-shadow: -1px 0 #191920, 0 1px #191920, 1px 0 #191920,
-            0 -1px #191920;
+          text-shadow: -0.1rem 0 #191920, 0 0.1rem #191920, 0.1rem 0 #191920,
+            0 -0.1rem #191920;
         }
       }
 
@@ -401,7 +402,7 @@ export const Chat = styled.div`
 
       &::-webkit-scrollbar-thumb {
         background: #e65100;
-        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+        box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.5);
       }
 
       li {

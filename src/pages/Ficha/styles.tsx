@@ -12,6 +12,7 @@ export const Container = styled.div`
     height: 30rem;
   }
 `;
+
 export const Cabecalho = styled.div`
   @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
   display: grid;
@@ -31,7 +32,7 @@ export const Cabecalho = styled.div`
       width: 120%;
       background: none;
       border: none;
-      border-bottom: 1px solid #191920;
+      border-bottom: 0.1rem solid #191920;
     }
     input[type='number'] {
       &::-webkit-outer-spin-button,
@@ -42,12 +43,14 @@ export const Cabecalho = styled.div`
     }
   }
 `;
+
 export const Descricao = styled.div`
   @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
   display: flex;
   max-width: 50rem;
   flex-direction: column;
   align-items: center;
+
   header {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #191920;
@@ -58,6 +61,7 @@ export const Descricao = styled.div`
     padding: 1rem;
     font-size: 3rem;
   }
+
   .content {
     div {
       margin-right: 1rem;
@@ -67,15 +71,18 @@ export const Descricao = styled.div`
     flex-wrap: wrap;
     color: #fff;
     font-size: 2rem;
+
     label {
       font-weight: bold;
     }
+
     font-family: 'Kalam', cursive;
+
     input {
       margin-left: 1rem;
       border: none;
       width: auto;
-      border-bottom: 1px solid #fff;
+      border-bottom: 0.1rem solid #fff;
       background: none;
       color: #c5c5c5;
     }
@@ -87,6 +94,7 @@ export const Experiencia = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 50rem;
+
   header {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #191920;
@@ -97,24 +105,29 @@ export const Experiencia = styled.div`
     padding: 1rem;
     font-size: 3rem;
   }
+
   .content {
     max-width: 54rem;
     display: flex;
     color: #fff;
     flex-direction: column;
     font-size: 2rem;
+
     div {
       margin-right: 1rem;
     }
+
     label {
       float: left;
       font-weight: bold;
     }
+
     font-family: 'Kalam', cursive;
+
     input {
       border: none;
       width: 100%;
-      border-bottom: 1px solid #fff;
+      border-bottom: 0.1rem solid #fff;
       background: none;
       color: #c5c5c5;
     }
@@ -148,6 +161,7 @@ export const PericiasComArmas = styled.table`
         color: #fff;
         font-size: 13px;
       }
+
       button,
       input {
         height: 25px;
@@ -164,16 +178,20 @@ export const PericiasComArmas = styled.table`
     }
   }
 `;
+
 export const Attributes = styled.table`
   max-width: 60rem;
+
   tr {
     td {
       & + td {
         padding-top: 1rem;
       }
+
       & + td {
         padding-left: 2rem;
       }
+
       div {
         display: flex;
         flex-direction: column;
@@ -183,6 +201,7 @@ export const Attributes = styled.table`
         font-size: 13px;
         font-family: Arial, Helvetica, sans-serif;
         background-color: #191920;
+
         h1 {
           font-weight: bold;
         }
@@ -191,6 +210,7 @@ export const Attributes = styled.table`
         height: 55px;
         width: 6rem;
         text-align: center;
+
         &::-webkit-outer-spin-button,
         &::-webkit-inner-spin-button {
           -webkit-appearance: none;
@@ -203,9 +223,11 @@ export const Attributes = styled.table`
 export const Stats = styled.div`
   display: flex;
   flex-direction: column;
+
   .field {
     display: flex;
     justify-content: space-between;
+
     .label {
       text-align: center;
       color: #fff;
@@ -213,22 +235,27 @@ export const Stats = styled.div`
       padding: 3px;
       width: 15rem;
       background-color: #191920;
+
       h2 {
         font-weight: bold;
       }
+
       h3 {
         font-family: 'Kalam', cursive;
       }
     }
+
     .formGroup {
       text-align: center;
       display: flex;
       flex-direction: column;
+
       label {
         font-family: 'Kalam', cursive;
         font-weight: bold;
         font-size: 130%;
       }
+
       input {
         text-align: center;
         font-family: 'Henny Penny', cursive;
@@ -236,6 +263,7 @@ export const Stats = styled.div`
         height: 5rem;
         width: 8rem;
       }
+
       input[type='number'] {
         &::-webkit-outer-spin-button,
         &::-webkit-inner-spin-button {
@@ -249,30 +277,36 @@ export const Stats = styled.div`
 export const Protecoes = styled.div`
   display: flex;
   flex-direction: column;
+
   label {
     font-family: 'Henny Penny', cursive;
     font-size: 3rem;
   }
+
   h4 {
     font-family: 'Kalam', cursive;
   }
+
   div {
     display: flex;
     align-items: center;
   }
+
   input {
     border: none;
     background: none;
     width: 200%;
-    padding: 2px 2rem;
-    border-bottom: 1px solid #191920;
+    padding: 0.2rem 2rem;
+    border-bottom: 0.1rem solid #191920;
   }
+
   input[type='number'] {
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
       -webkit-appearance: none;
       margin: 0;
     }
+
     width: 100%;
   }
 `;

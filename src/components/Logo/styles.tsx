@@ -58,7 +58,7 @@ export const Container = styled.div`
   }
   h3 {
     font-size: 1.5rem;
-    right: -16rem;
+    right: -10rem;
     bottom: -5rem;
     transform: rotate(-20deg);
     animation: ${rotate} 1s linear alternate infinite;

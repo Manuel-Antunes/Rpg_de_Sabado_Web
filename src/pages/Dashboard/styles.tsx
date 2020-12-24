@@ -21,17 +21,20 @@ export const Container = styled.div`
     text-align: center;
     letter-spacing: 0.5rem;
   }
+
   label {
     font-family: cursive;
     color: #e65100;
     font-size: 2.3em;
   }
+
   h3 {
     font-family: cursive;
     color: #e65100;
     font-size: 3rem;
     text-align: center;
   }
+
   button {
     font-family: cursive;
     font-size: 3rem;
@@ -42,6 +45,10 @@ export const Container = styled.div`
 `;
 
 export const UserContainer = styled.header`
+  @media (orientation: portrait) {
+    visibility: hidden;
+  }
+
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -92,7 +99,12 @@ export const TableList = styled.ul`
   overflow: auto;
   overflow-y: scroll;
   max-width: 54rem;
-  max-height: 30rem;
+  max-height: 45vh;
+
+  @media (orientation: portrait) {
+    max-height: 55vh;
+  }
+
   list-style: none;
   background: #141419;
 

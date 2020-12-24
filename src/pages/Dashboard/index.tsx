@@ -24,6 +24,7 @@ import { User } from '../../tsstore/ducks/user/types';
 import { ApplicationState } from '../../tsstore';
 import { Game } from '../../types';
 import { signOutRequest } from '../../tsstore/ducks/auth/actions';
+import HMenu from '../../components/HMenu';
 
 interface OwnProps {
   data: User;
@@ -139,6 +140,14 @@ const Dashboard: React.FC = () => {
   }
   return (
     <Container>
+      <HMenu>
+        <li>
+          <UserContainer>
+            <img src={user?.photoURL ? user.photoURL : ''} alt="" />
+            <label>{user?.displayName}</label>
+          </UserContainer>
+        </li>
+      </HMenu>
       <MainHeader>
         <h1>Mesas</h1>
         <img src={dice} alt="dice" />
@@ -171,6 +180,7 @@ const Dashboard: React.FC = () => {
         <img src={user?.photoURL ? user.photoURL : ''} alt="" />
         <label>{user?.displayName}</label>
       </UserContainer>
+
       <section>
         <h3>Minhas Mesas</h3>
         <TableList>
