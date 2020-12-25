@@ -60,16 +60,6 @@ export const Categorias = styled.div`
 
   padding-top: 1rem;
 
-  &::-webkit-scrollbar {
-    width: 5px;
-    background: ${darken(0.2, '#e65100')};
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: #e65100;
-    box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.5);
-  }
-
   span {
     font-size: 3rem;
     color: #e65100;
@@ -98,6 +88,16 @@ export const Categorias = styled.div`
   > ul {
     overflow: auto;
     overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 0.5rem;
+      background: ${darken(0.2, '#e65100')};
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #e65100;
+      box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.5);
+    }
   }
 `;
 
@@ -111,6 +111,11 @@ export const Fichas = styled.ul`
 
     & + li {
       margin-top: 0.3rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+      border-color: #e65100;
     }
 
     border: 0.1rem solid #707070;
@@ -129,6 +134,10 @@ export const Fichas = styled.ul`
       font-size: 1.5rem;
       text-shadow: -0.1rem 0 #191920, 0 0.1rem #191920, 0.1rem 0 #191920,
         0 -0.1rem #191920;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 `;
@@ -140,6 +149,21 @@ export const Main = styled.div`
   ul {
     display: flex;
     border-bottom: 0.3rem solid #2f2f3b;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    max-width: 73rem;
+    height: 4.2rem;
+    padding: 0;
+
+    &::-webkit-scrollbar {
+      height: 0.5rem;
+      background: ${darken(0.2, '#e65100')};
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #e65100;
+      box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.5);
+    }
 
     li {
       display: flex;
@@ -163,12 +187,25 @@ export const Main = styled.div`
       svg {
         margin-right: 0.5rem;
 
-        path {
-          color: #2f2f3b;
+        &:hover {
+          cursor: pointer;
+
+          path {
+            color: #e65100;
+          }
         }
 
-        path + path {
-          color: #e65100;
+        path {
+          color: #2f2f3b;
+
+          &:hover {
+            color: #e65100;
+            cursor: pointer;
+          }
+
+          & + path {
+            color: #e65100;
+          }
         }
       }
     }
@@ -184,7 +221,7 @@ export const Main = styled.div`
 
     overflow: auto;
     overflow-y: scroll;
-    max-height: 38.3rem;
+    height: 37.8rem;
 
     &::-webkit-scrollbar {
       width: 5px;

@@ -15,6 +15,7 @@ import dice from '../../resources/images/baixados.png';
 import {
   Container,
   FormControl,
+  HMenuList,
   LogOutButton,
   TableList,
   UserContainer,
@@ -141,12 +142,10 @@ const Dashboard: React.FC = () => {
   return (
     <Container>
       <HMenu>
-        <li>
-          <UserContainer>
-            <img src={user?.photoURL ? user.photoURL : ''} alt="" />
-            <label>{user?.displayName}</label>
-          </UserContainer>
-        </li>
+        <HMenuList>
+          <img src={user?.photoURL ? user.photoURL : ''} alt="" />
+          <label>{user?.displayName}</label>
+        </HMenuList>
       </HMenu>
       <MainHeader>
         <h1>Mesas</h1>

@@ -69,6 +69,25 @@ export const UserContainer = styled.header`
   }
 `;
 
+export const HMenuList = styled.li`
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem 0 0 !important;
+
+  img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+
+    margin-right: 1rem;
+  }
+
+  label {
+    font-size: 1.5rem;
+    max-width: 20rem;
+  }
+`;
+
 export const FormControl = styled.div`
   display: flex;
   flex-direction: column;

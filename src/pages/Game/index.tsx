@@ -1,11 +1,16 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable react/jsx-curly-newline */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import firebase from 'firebase';
 import { ImExit } from 'react-icons/im';
 import { IoMdCloseCircleOutline } from 'react-icons/io';
 import { Link } from 'react-router-dom';
+import ReactDOM from 'react-dom/server';
 import {
   Container,
   Fichas,
@@ -32,6 +37,7 @@ import ded from '../../resources/images/dungeons.png';
 import { store } from '../../tsstore';
 
 const Game: React.FC = () => {
+  const [currentTab, setCurrentTab] = useState<string>();
   const [mesa, setMesa] = useState<Mesa>({
     id: '1',
     nome: 'Dungeons&Dragons',
@@ -39,7 +45,7 @@ const Game: React.FC = () => {
     players: 3,
     maxPlayers: 10,
   });
-  const [users, setUsers] = useState();
+  // const [users, setUsers] = useState();
   function getMinNome(nome: string): string {
     const [a, b] = nome.split(' ');
     return `${a} ${b}`;
@@ -48,139 +54,166 @@ const Game: React.FC = () => {
     {
       name: 'a',
       fichas: [
-        { owner: 'a', name: 'Legolas o Elfo', image: legolas },
-        { owner: 'a', name: 'a', image: legolas },
-        { owner: 'a', name: 'a', image: legolas },
+        { owner: 'a', name: 'Legolas o Elfo', image: legolas, File: Ficha },
+        { owner: 'a', name: 'a', image: legolas, File: Ficha },
+        { owner: 'a', name: 'a', image: legolas, File: Ficha },
       ],
     },
     {
       name: 'a',
       fichas: [
-        { owner: 'a', name: 'Legolas o Elfo', image: legolas },
-        { owner: 'a', name: 'a', image: legolas },
-        { owner: 'a', name: 'a', image: legolas },
+        { owner: 'a', name: 'Legolas o Elfo', image: legolas, File: Ficha },
+        { owner: 'a', name: 'a', image: legolas, File: Ficha },
+        { owner: 'a', name: 'a', image: legolas, File: Ficha },
       ],
     },
     {
       name: 'a',
       fichas: [
-        { owner: 'a', name: 'Legolas o Elfo', image: legolas },
-        { owner: 'a', name: 'a', image: legolas },
-        { owner: 'a', name: 'a', image: legolas },
+        { owner: 'a', name: 'Legolas o Elfo', image: legolas, File: Ficha },
+        { owner: 'a', name: 'a', image: legolas, File: Ficha },
+        { owner: 'a', name: 'a', image: legolas, File: Ficha },
       ],
     },
   ]);
   const [jogadores, setJogadores] = useState<
     Array<firebase.User | null | undefined>
   >([store.getState().user.data.user]);
-  const [guias, setGuias] = useState([
-    { nome: 'ficha 1' },
-    { nome: 'ficha 2' },
-    { nome: 'ficha 3' },
-  ]);
+  const [tabs, setTabs] = useState<{
+    currentTable: number;
+    tabs: React.FC[];
+  }>({ currentTable: 0, tabs: [] });
 
   const [messages, setMessages] = useState([
     {
       owner: 'Jorge',
       text: 'pimba',
-      time: new Date().getTime(),
+      time: new Date().getTime() + Math.random(),
     },
     {
       owner: 'Jorge',
       text: 'pimba',
-      time: new Date().getTime(),
+      time: new Date().getTime() + Math.random(),
     },
     {
       owner: 'Jorge',
       text: 'pimba',
-      time: new Date().getTime(),
+      time: new Date().getTime() + Math.random(),
     },
     {
       owner: 'Jorge',
       text: 'pimba',
-      time: new Date().getTime(),
+      time: new Date().getTime() + Math.random(),
     },
     {
       owner: 'Jorge',
       text: 'pimba',
-      time: new Date().getTime(),
+      time: new Date().getTime() + Math.random(),
     },
     {
       owner: 'Jorge',
       text: 'pimba',
-      time: new Date().getTime(),
+      time: new Date().getTime() + Math.random(),
     },
     {
       owner: 'Jorge',
       text: 'pimba',
-      time: new Date().getTime(),
+      time: new Date().getTime() + Math.random(),
     },
     {
       owner: 'Jorge',
       text: 'pimba',
-      time: new Date().getTime(),
+      time: new Date().getTime() + Math.random(),
     },
     {
       owner: 'Jorge',
       text: 'pimba',
-      time: new Date().getTime(),
+      time: new Date().getTime() + Math.random(),
     },
     {
       owner: 'Jorge',
       text: 'pimba',
-      time: new Date().getTime(),
+      time: new Date().getTime() + Math.random(),
     },
     {
       owner: 'Jorge',
       text: 'pimba',
-      time: new Date().getTime(),
+      time: new Date().getTime() + Math.random(),
     },
     {
       owner: 'Jorge',
       text: 'pimba',
-      time: new Date().getTime(),
+      time: new Date().getTime() + Math.random(),
     },
     {
       owner: 'Jorge',
       text: 'pimba',
-      time: new Date().getTime(),
+      time: new Date().getTime() + Math.random(),
     },
     {
       owner: 'Jorge',
       text: 'pimba',
-      time: new Date().getTime(),
+      time: new Date().getTime() + Math.random(),
     },
     {
       owner: 'Jorge',
       text: 'pimba',
-      time: new Date().getTime(),
+      time: new Date().getTime() + Math.random(),
     },
     {
       owner: 'Jorge',
       text: 'pimba',
-      time: new Date().getTime(),
+      time: new Date().getTime() + Math.random(),
     },
     {
       owner: 'Jorge',
       text: 'pimba',
-      time: new Date().getTime(),
+      time: new Date().getTime() + Math.random(),
     },
     {
       owner: 'Jorge',
       text: 'pimba',
-      time: new Date().getTime(),
+      time: new Date().getTime() + Math.random(),
     },
     {
       owner: 'Jorge',
       text: 'pimba',
-      time: new Date().getTime(),
+      time: new Date().getTime() + Math.random(),
     },
     {
       owner: 'Jorge',
       text: 'pimba',
-      time: new Date().getTime(),
+      time: new Date().getTime() + Math.random(),
     },
   ]);
+
+  function handleAddTab(file: React.FC) {
+    setTabs({
+      currentTable: tabs.tabs.length === 0 ? 0 : tabs.tabs.length,
+      tabs: [...tabs?.tabs, file],
+    });
+  }
+
+  function handleChangeTab(index: number) {
+    setTabs({ currentTable: index, tabs: tabs.tabs });
+  }
+
+  function handleRemoveTab(index: number) {
+    const newTabList = tabs.tabs.filter((tab, id) => id !== index && tab);
+
+    setTabs({
+      currentTable: tabs.currentTable,
+      tabs: newTabList,
+    });
+  }
+
+  useEffect(() => {
+    const page = Ficha({});
+    if (page !== null) {
+      setCurrentTab(ReactDOM.renderToString(page));
+    }
+  }, []);
+
   return (
     <Container>
       <Title>
@@ -201,7 +234,8 @@ const Game: React.FC = () => {
                 <span>{element.name}</span>
                 <Fichas>
                   {element.fichas.map((ficha) => (
-                    <li>
+                    // eslint-disable-next-line @typescript-eslint/no-empty-function
+                    <li onClick={() => {}}>
                       <img src={ficha.image} alt="" />
                       <label htmlFor="">{ficha.name}</label>
                     </li>
@@ -213,16 +247,19 @@ const Game: React.FC = () => {
         </Categorias>
         <Main>
           <ul>
-            {guias.map((guia) => (
+            {tabs.tabs.map((tab, index) => (
               <li>
-                <span>{guia.nome}</span>
-                <IoMdCloseCircleOutline size={20} />
+                <div onClick={() => handleChangeTab(index)}>
+                  <span>{tab.name}</span>
+                </div>
+                <IoMdCloseCircleOutline
+                  size={20}
+                  onClick={() => handleRemoveTab(index)}
+                />
               </li>
             ))}
           </ul>
-          <div>
-            <Ficha />
-          </div>
+          <div>{currentTab}</div>
         </Main>
         <Jogadores>
           <span>Jogadores</span>

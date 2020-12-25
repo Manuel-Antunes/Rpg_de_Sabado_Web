@@ -18,202 +18,200 @@ import {
 } from './styles';
 
 const Ficha: React.FC = () => {
-  const [estado, setEstado] = useState({
-    nomeDoPersonagem: '',
-    religião: '',
-    localDeNascimento: '',
-    nome_do_jogador: '',
-    kit: '',
-    nivel: 0,
-    religiao: '',
-    nomeDoJogador: '',
-    idiomas: '',
-    sexo: '',
-    altura: '',
-    cabelos: '',
-    olhos: '',
-    idadeAparente: 0,
-    idadeReal: 0,
-    peso: '0 kg',
-    xp: '',
-    xpNl: '',
-    pvAt: 0,
-    ph: 0,
-    phAt: 0,
-    pm: 0,
-    pmAt: 0,
-    pf: 0,
-    pfAt: 0,
-    protecoes: {
-      armaduara1: {
-        name: '',
-        value: 0,
-      },
-      armaduara2: {
-        name: '',
-        value: 0,
-      },
-      escudo: {
-        name: '',
-        value: 0,
-      },
-      outros: {
-        name: '',
-        value: 0,
-      },
-    },
-    linhas: [
-      { title: 'CON', full: 'Constituição', value: 0, mod: 0 },
-      { title: 'FR', full: 'Força', value: 0, mod: 0 },
-      { title: 'DEX', full: 'Destresa', value: 0, mod: 0 },
-      { title: 'AGI', full: 'Agilidade', value: 0, mod: 0 },
-      { title: 'INT', full: 'Inteligencia', value: 0, mod: 0 },
-      { title: 'WILL', full: 'Força de Vontade', value: 0, mod: 0 },
-      { title: 'PER', full: 'Percepção', value: 0, mod: 0 },
-      { title: 'CAR', full: 'Carisma', value: 0, mod: 0 },
-    ],
-    aprimoramentos: [
-      {
-        nome: '',
-        custo: '',
-      },
-      {
-        nome: '',
-        custo: '',
-      },
-      {
-        nome: '',
-        custo: '',
-      },
-      {
-        nome: '',
-        custo: '',
-      },
-      {
-        nome: '',
-        custo: '',
-      },
-      {
-        nome: '',
-        custo: '',
-      },
-      {
-        nome: '',
-        custo: '',
-      },
-      {
-        nome: '',
-        custo: '',
-      },
-    ],
-    pericias: [
-      {
-        nome: 'Nome',
-        atributo: 'atributo',
-        gasto: 0,
-      },
-      {
-        nome: 'Nome',
-        atributo: 'atributo',
-        gasto: 0,
-      },
-      {
-        nome: 'Nome',
-        atributo: 'atributo',
-        gasto: 0,
-      },
-      {
-        nome: 'Nome',
-        atributo: 'atributo',
-        gasto: 0,
-      },
-      {
-        nome: 'Nome',
-        atributo: 'atributo',
-        gasto: 0,
-      },
-      {
-        nome: 'Nome',
-        atributo: 'atributo',
-        gasto: 0,
-      },
-      {
-        nome: 'Nome',
-        atributo: 'atributo',
-        gasto: 0,
-      },
-      {
-        nome: 'Nome',
-        atributo: 'atributo',
-        gasto: 0,
-      },
-      {
-        nome: 'Nome',
-        atributo: 'atributo',
-        gasto: 0,
-      },
-      {
-        nome: 'Nome',
-        atributo: 'atributo',
-        gasto: 0,
-      },
-      {
-        nome: 'Nome',
-        atributo: 'atributo',
-        gasto: 0,
-      },
-      {
-        nome: 'Nome',
-        atributo: 'atributo',
-        gasto: 0,
-      },
-      {
-        nome: 'Nome',
-        atributo: 'atributo',
-        gasto: 0,
-      },
-      {
-        nome: 'Nome',
-        atributo: 'atributo',
-        gasto: 0,
-      },
-    ],
-    periciasComArmas: [
-      {
-        nome: 'Briga',
-        atributo: '',
-        tipo: '',
-        gastoAt: '',
-        at: '',
-        def: '',
-        gastoDef: '',
-        dano: '',
-      },
-      {
-        nome: 'Pistola',
-        atributo: 'DEX  ',
-        tipo: 'Ranged',
-        gastoAt: '',
-        at: 20,
-        def: '',
-        gastoDef: '',
-        dano: '',
-      },
-      {
-        nome: 'Armas de cano longo',
-        atributo: 'DEX',
-        tipo: 'Ranged',
-        gastoAt: '',
-        at: 20,
-        def: '',
-        gastoDef: '',
-        dano: '',
-      },
-    ],
-  });
-  useEffect(() => {
-    console.log(estado.protecoes.armaduara1);
-  }, [estado]);
+  // const [estado, setEstado] = useState({
+  //   nomeDoPersonagem: '',
+  //   religião: '',
+  //   localDeNascimento: '',
+  //   nome_do_jogador: '',
+  //   kit: '',
+  //   nivel: 0,
+  //   religiao: '',
+  //   nomeDoJogador: '',
+  //   idiomas: '',
+  //   sexo: '',
+  //   altura: '',
+  //   cabelos: '',
+  //   olhos: '',
+  //   idadeAparente: 0,
+  //   idadeReal: 0,
+  //   peso: '0 kg',
+  //   xp: '',
+  //   xpNl: '',
+  //   pvAt: 0,
+  //   ph: 0,
+  //   phAt: 0,
+  //   pm: 0,
+  //   pmAt: 0,
+  //   pf: 0,
+  //   pfAt: 0,
+  //   protecoes: {
+  //     armaduara1: {
+  //       name: '',
+  //       value: 0,
+  //     },
+  //     armaduara2: {
+  //       name: '',
+  //       value: 0,
+  //     },
+  //     escudo: {
+  //       name: '',
+  //       value: 0,
+  //     },
+  //     outros: {
+  //       name: '',
+  //       value: 0,
+  //     },
+  //   },
+  //   linhas: [
+  //     { title: 'CON', full: 'Constituição', value: 0, mod: 0 },
+  //     { title: 'FR', full: 'Força', value: 0, mod: 0 },
+  //     { title: 'DEX', full: 'Destresa', value: 0, mod: 0 },
+  //     { title: 'AGI', full: 'Agilidade', value: 0, mod: 0 },
+  //     { title: 'INT', full: 'Inteligencia', value: 0, mod: 0 },
+  //     { title: 'WILL', full: 'Força de Vontade', value: 0, mod: 0 },
+  //     { title: 'PER', full: 'Percepção', value: 0, mod: 0 },
+  //     { title: 'CAR', full: 'Carisma', value: 0, mod: 0 },
+  //   ],
+  //   aprimoramentos: [
+  //     {
+  //       nome: '',
+  //       custo: '',
+  //     },
+  //     {
+  //       nome: '',
+  //       custo: '',
+  //     },
+  //     {
+  //       nome: '',
+  //       custo: '',
+  //     },
+  //     {
+  //       nome: '',
+  //       custo: '',
+  //     },
+  //     {
+  //       nome: '',
+  //       custo: '',
+  //     },
+  //     {
+  //       nome: '',
+  //       custo: '',
+  //     },
+  //     {
+  //       nome: '',
+  //       custo: '',
+  //     },
+  //     {
+  //       nome: '',
+  //       custo: '',
+  //     },
+  //   ],
+  //   pericias: [
+  //     {
+  //       nome: 'Nome',
+  //       atributo: 'atributo',
+  //       gasto: 0,
+  //     },
+  //     {
+  //       nome: 'Nome',
+  //       atributo: 'atributo',
+  //       gasto: 0,
+  //     },
+  //     {
+  //       nome: 'Nome',
+  //       atributo: 'atributo',
+  //       gasto: 0,
+  //     },
+  //     {
+  //       nome: 'Nome',
+  //       atributo: 'atributo',
+  //       gasto: 0,
+  //     },
+  //     {
+  //       nome: 'Nome',
+  //       atributo: 'atributo',
+  //       gasto: 0,
+  //     },
+  //     {
+  //       nome: 'Nome',
+  //       atributo: 'atributo',
+  //       gasto: 0,
+  //     },
+  //     {
+  //       nome: 'Nome',
+  //       atributo: 'atributo',
+  //       gasto: 0,
+  //     },
+  //     {
+  //       nome: 'Nome',
+  //       atributo: 'atributo',
+  //       gasto: 0,
+  //     },
+  //     {
+  //       nome: 'Nome',
+  //       atributo: 'atributo',
+  //       gasto: 0,
+  //     },
+  //     {
+  //       nome: 'Nome',
+  //       atributo: 'atributo',
+  //       gasto: 0,
+  //     },
+  //     {
+  //       nome: 'Nome',
+  //       atributo: 'atributo',
+  //       gasto: 0,
+  //     },
+  //     {
+  //       nome: 'Nome',
+  //       atributo: 'atributo',
+  //       gasto: 0,
+  //     },
+  //     {
+  //       nome: 'Nome',
+  //       atributo: 'atributo',
+  //       gasto: 0,
+  //     },
+  //     {
+  //       nome: 'Nome',
+  //       atributo: 'atributo',
+  //       gasto: 0,
+  //     },
+  //   ],
+  //   periciasComArmas: [
+  //     {
+  //       nome: 'Briga',
+  //       atributo: '',
+  //       tipo: '',
+  //       gastoAt: '',
+  //       at: '',
+  //       def: '',
+  //       gastoDef: '',
+  //       dano: '',
+  //     },
+  //     {
+  //       nome: 'Pistola',
+  //       atributo: 'DEX  ',
+  //       tipo: 'Ranged',
+  //       gastoAt: '',
+  //       at: 20,
+  //       def: '',
+  //       gastoDef: '',
+  //       dano: '',
+  //     },
+  //     {
+  //       nome: 'Armas de cano longo',
+  //       atributo: 'DEX',
+  //       tipo: 'Ranged',
+  //       gastoAt: '',
+  //       at: 20,
+  //       def: '',
+  //       gastoDef: '',
+  //       dano: '',
+  //     },
+  //   ],
+  // });
+
   function handleUpdate(
     e: React.ChangeEvent<HTMLInputElement>,
     limite: number,
@@ -279,7 +277,7 @@ const Ficha: React.FC = () => {
         <img src="" alt="imagem da ficha" id="profile" />
         <div>
           <Attributes>
-            {estado.linhas.map((l, index) => (
+            {/* {estado.linhas.map((l, index) => (
               <tr key={index}>
                 <td>
                   <div>
@@ -314,7 +312,7 @@ const Ficha: React.FC = () => {
                   />
                 </td>
               </tr>
-            ))}
+            ))} */}
           </Attributes>
 
           <PericiasComArmas>
@@ -362,7 +360,7 @@ const Ficha: React.FC = () => {
                   </div>
                 </td>
               </tr>
-              {estado.periciasComArmas.map((pComArmas, index) => (
+              {/* {estado.periciasComArmas.map((pComArmas, index) => (
                 <tr key={index}>
                   <td>
                     <input type="text" className="nome" />
@@ -417,7 +415,7 @@ const Ficha: React.FC = () => {
                     <input type="text" className="dano" />
                   </td>
                 </tr>
-              ))}
+              ))} */}
             </div>
           </PericiasComArmas>
           <PericiasComArmas>
@@ -445,7 +443,7 @@ const Ficha: React.FC = () => {
                   </div>
                 </td>
               </tr>
-              {estado.pericias.map((pComArmas, index) => (
+              {/* {estado.pericias.map((pComArmas, index) => (
                 <tr key={index}>
                   <td>
                     <input type="text" className="nome" />
@@ -474,7 +472,7 @@ const Ficha: React.FC = () => {
                     />
                   </td>
                 </tr>
-              ))}
+              ))} */}
             </div>
           </PericiasComArmas>
         </div>
@@ -602,7 +600,7 @@ const Ficha: React.FC = () => {
                     type="number"
                     disabled
                     id="pv_atual"
-                    value={estado.protecoes.outros.value}
+                    // value={estado.protecoes.outros.value}
                   />
                 </div>
               </div>
@@ -616,16 +614,16 @@ const Ficha: React.FC = () => {
               <h4>armadura</h4>
               <input
                 type="number"
-                onChange={(e) => {
-                  const novoEstado = estado;
-                  if (e.target.value) {
-                    novoEstado.protecoes.armaduara1.value = parseInt(
-                      e.target.value,
-                      10,
-                    );
-                  }
-                  setEstado(novoEstado);
-                }}
+                // onChange={(e) => {
+                //   const novoEstado = estado;
+                //   if (e.target.value) {
+                //     novoEstado.protecoes.armaduara1.value = parseInt(
+                //       e.target.value,
+                //       10,
+                //     );
+                //   }
+                //   setEstado(novoEstado);
+                // }}
               />
             </div>
             <div>
@@ -634,16 +632,16 @@ const Ficha: React.FC = () => {
               <h4>armadura</h4>
               <input
                 type="number"
-                onChange={(e) => {
-                  const novoEstado = estado;
-                  if (e.target.value) {
-                    novoEstado.protecoes.armaduara2.value = parseInt(
-                      e.target.value,
-                      10,
-                    );
-                  }
-                  setEstado(novoEstado);
-                }}
+                // onChange={(e) => {
+                //   const novoEstado = estado;
+                //   if (e.target.value) {
+                //     novoEstado.protecoes.armaduara2.value = parseInt(
+                //       e.target.value,
+                //       10,
+                //     );
+                //   }
+                //   setEstado(novoEstado);
+                // }}
               />
             </div>
             <div>
@@ -652,16 +650,16 @@ const Ficha: React.FC = () => {
               <h4>escudo</h4>
               <input
                 type="number"
-                onChange={(e) => {
-                  const novoEstado = estado;
-                  if (e.target.value) {
-                    novoEstado.protecoes.escudo.value = parseInt(
-                      e.target.value,
-                      10,
-                    );
-                  }
-                  setEstado(novoEstado);
-                }}
+                // onChange={(e) => {
+                //   const novoEstado = estado;
+                //   if (e.target.value) {
+                //     novoEstado.protecoes.escudo.value = parseInt(
+                //       e.target.value,
+                //       10,
+                //     );
+                //   }
+                //   setEstado(novoEstado);
+                // }}
               />
             </div>
             <div>
@@ -670,17 +668,17 @@ const Ficha: React.FC = () => {
               <h4>outros</h4>
               <input
                 type="number"
-                onChange={(e) => {
-                  const novoEstado = estado;
-                  if (e.target.value) {
-                    novoEstado.protecoes.outros.value = parseInt(
-                      e.target.value,
-                      10,
-                    );
-                  }
-                  setEstado(novoEstado);
-                  console.log(estado.protecoes.outros);
-                }}
+                // onChange={(e) => {
+                //   const novoEstado = estado;
+                //   if (e.target.value) {
+                //     novoEstado.protecoes.outros.value = parseInt(
+                //       e.target.value,
+                //       10,
+                //     );
+                //   }
+                //   setEstado(novoEstado);
+                //   console.log(estado.protecoes.outros);
+                // }}
               />
             </div>
           </Protecoes>
@@ -700,7 +698,7 @@ const Ficha: React.FC = () => {
                   </div>
                 </td>
               </tr>
-              {estado.aprimoramentos.map((pComArmas, index) => (
+              {/* {estado.aprimoramentos.map((pComArmas, index) => (
                 <tr key={index}>
                   <td>
                     <input type="text" className="nome" />
@@ -709,7 +707,7 @@ const Ficha: React.FC = () => {
                     <input type="number" />
                   </td>
                 </tr>
-              ))}
+              ))} */}
             </div>
           </PericiasComArmas>
         </div>

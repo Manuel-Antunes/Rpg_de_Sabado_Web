@@ -82,6 +82,7 @@ export const Container = styled.nav`
   #menuToggle input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-0.2rem, -0.1rem);
+    background: #e65100;
   }
 
   /*
@@ -108,10 +109,10 @@ export const Container = styled.nav`
     flex-direction: column;
     align-items: flex-end;
     position: absolute;
-    width: 105vw;
+    width: 40vw;
     height: 105vh;
-    margin: -10rem 0 0 -93vw;
-    padding: 20rem 7rem 0 0;
+    margin: -10rem 0 0 -30vw;
+    padding: 20rem 0rem 0 2rem;
     padding-top: 12.5rem;
 
     background: #232323;
