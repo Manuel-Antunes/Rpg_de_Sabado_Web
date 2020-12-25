@@ -457,12 +457,10 @@ export const Chat = styled.div`
   textarea {
     height: 3rem;
     resize: none;
-
     background: #111213;
     color: #e65100;
     font-size: 1.5rem;
     font-family: Roboto, sans-serif;
-
     &::placeholder {
       color: #e65100;
       font-size: 1.5rem;

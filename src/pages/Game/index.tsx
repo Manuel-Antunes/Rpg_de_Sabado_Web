@@ -5,12 +5,15 @@
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState, useMemo } from 'react';
 import firebase from 'firebase';
+import { io } from 'socket.io-client/build/index';
 import { ImExit } from 'react-icons/im';
 import { IoMdCloseCircleOutline } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 import ReactDOM from 'react-dom/server';
+import { useSelector } from 'react-redux';
+
 import {
   Container,
   Fichas,
@@ -34,7 +37,7 @@ import d20 from '../../resources/images/d20.svg';
 import d100 from '../../resources/images/d100.svg';
 import { Game as Mesa } from '../../types';
 import ded from '../../resources/images/dungeons.png';
-import { store } from '../../tsstore';
+import { store, ApplicationState } from '../../tsstore';
 
 const Game: React.FC = () => {
   const [currentTab, setCurrentTab] = useState<string>();
@@ -45,11 +48,31 @@ const Game: React.FC = () => {
     players: 3,
     maxPlayers: 10,
   });
+  const user = useSelector<ApplicationState>((state) => state.user.data.user);
+  const socket = useMemo(
+    () =>
+      io('http://localhost:3333', {
+        withCredentials: true,
+      }),
+    [user],
+  );
+
   // const [users, setUsers] = useState();
   function getMinNome(nome: string): string {
     const [a, b] = nome.split(' ');
     return `${a} ${b}`;
   }
+
+  function handleSubmitChatMessage(
+    e: React.KeyboardEvent<HTMLTextAreaElement>,
+  ) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      const area = e.target as HTMLTextAreaElement;
+      area.value = '';
+    }
+  }
+
   const [categorias, setCategorias] = useState([
     {
       name: 'a',
@@ -332,6 +355,7 @@ const Game: React.FC = () => {
               </ul>
             </div>
             <textarea
+              onKeyPress={handleSubmitChatMessage}
               name="message"
               id="message"
               placeholder="  type here..."
