@@ -54,7 +54,7 @@ const Game: React.FC = () => {
       io('http://localhost:3333', {
         withCredentials: true,
       }),
-    [user],
+    [],
   );
 
   // const [users, setUsers] = useState();
