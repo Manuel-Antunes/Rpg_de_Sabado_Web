@@ -25,6 +25,7 @@ export const Container = styled.div`
   @import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
 
   position: relative;
+
   h1 {
     text-align: center;
     font-family: 'Henny Penny', cursive;
@@ -32,10 +33,16 @@ export const Container = styled.div`
     z-index: 1;
     color: #e65100;
     line-height: 120%;
+
     &:hover {
       cursor: default;
     }
+
+    @media (orientation: landscape) and (min-width: 1130px) {
+      font-size: 10rem;
+    }
   }
+
   #dice {
     max-width: 10rem;
     max-height: 16rem;
@@ -44,7 +51,14 @@ export const Container = styled.div`
     left: -5rem;
     animation: ${grow} 1s linear infinite;
     bottom: -1.5rem;
+
+    @media (orientation: landscape) and (min-width: 1130px) {
+      max-width: 14rem;
+      max-height: 16rem;
+      left: -8rem;
+    }
   }
+
   #jack {
     z-index: -1;
     max-width: 10rem;
@@ -55,7 +69,14 @@ export const Container = styled.div`
     width: auto;
     height: auto;
     animation: ${grow} 1s linear infinite;
+
+    @media (orientation: landscape) and (min-width: 1130px) {
+      max-width: 14rem;
+      max-height: 16rem;
+      right: -8rem;
+    }
   }
+
   h3 {
     font-size: 1.5rem;
     right: -10rem;
@@ -65,8 +86,15 @@ export const Container = styled.div`
     color: #e65100;
     font-family: 'Comic Sans MS', cursive, sans-serif;
     position: absolute;
+
     &:hover {
       cursor: default;
+    }
+
+    @media (orientation: landscape) and (min-width: 1130px) {
+      font-size: 3.5rem;
+      right: -11rem;
+      bottom: -9rem;
     }
   }
 `;

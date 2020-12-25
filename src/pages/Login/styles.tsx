@@ -7,8 +7,16 @@ export const Container = styled.div`
   padding: 4rem 0 0 0;
   justify-content: center;
 
+  @media (orientation: landscape) and (min-width: 1130px) {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+  }
+
   form {
     margin-top: 6rem;
+
     .buttons {
       margin-top: 65px;
       display: flex;
@@ -25,17 +33,23 @@ export const Container = styled.div`
     margin-top: 7rem;
     display: flex;
     justify-content: space-between;
-    width: 83%;
+    width: 100%;
+    align-items: center;
+
+    @media (orientation: landscape) and (min-width: 1130px) {
+      margin: 0;
+      margin-top: 3rem;
+    }
 
     h4 {
       color: #707070;
-      font-size: 3rem;
+      font-size: 2rem;
     }
 
     a {
       text-decoration: none;
       color: #e65100;
-      font-size: 3.4rem;
+      font-size: 2.4rem;
     }
 
     font-size: 4.5rem;
