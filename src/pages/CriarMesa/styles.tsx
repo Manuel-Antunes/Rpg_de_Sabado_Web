@@ -16,8 +16,8 @@ export const Form = styled.div`
   align-items: start;
   flex-direction: column;
 
-  width: 35rem;
-  height: 45rem;
+  width: 45rem;
+  height: 55rem;
   border-radius: 0.2rem;
 
   margin-top: 5rem;
@@ -25,26 +25,40 @@ export const Form = styled.div`
 
   background-color: #141419;
 
+  @media (orientation: portrait) {
+    width: 60rem;
+    height: 70rem;
+  }
+
   img {
     width: 11rem;
     position: absolute;
     top: -3rem;
-    left: 12.5rem;
+    left: 17rem;
     border-radius: 50%;
+
+    @media (orientation: portrait) {
+      width: 15rem;
+      left: 22rem;
+    }
   }
 
   div {
     display: flex;
     flex-direction: column;
-    max-width: 100%;
+    width: 100%;
     justify-content: center;
 
     label {
       font-family: cursive;
       font-style: italic;
       color: #e65100;
-      font-size: 1.25rem;
+      font-size: 2rem;
       margin-bottom: 0.25rem;
+
+      @media (orientation: portrait) {
+        font-size: 2.5rem;
+      }
     }
 
     textarea {
@@ -53,13 +67,21 @@ export const Form = styled.div`
     }
 
     button {
-      width: 11rem;
-      height: 3.25rem;
-      font-size: 1.5rem;
+      width: 16rem;
+      height: 4.25rem;
+      font-size: 2.5rem;
       position: absolute;
       justify-self: center;
-      left: 12.5rem;
-      bottom: -1.5rem;
+      left: 14rem;
+      bottom: -2rem;
+
+      @media (orientation: portrait) {
+        width: 25rem;
+        height: 6rem;
+        font-size: 3.5rem;
+        left: 17.5rem;
+        bottom: -2.5rem;
+      }
     }
   }
 

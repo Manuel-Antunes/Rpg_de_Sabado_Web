@@ -1,9 +1,9 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable no-console */
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import logo from '../../resources/images/Daemon.png';
 import {
@@ -17,200 +17,279 @@ import {
   Protecoes,
 } from './styles';
 
-const Ficha: React.FC = () => {
-  // const [estado, setEstado] = useState({
-  //   nomeDoPersonagem: '',
-  //   religião: '',
-  //   localDeNascimento: '',
-  //   nome_do_jogador: '',
-  //   kit: '',
-  //   nivel: 0,
-  //   religiao: '',
-  //   nomeDoJogador: '',
-  //   idiomas: '',
-  //   sexo: '',
-  //   altura: '',
-  //   cabelos: '',
-  //   olhos: '',
-  //   idadeAparente: 0,
-  //   idadeReal: 0,
-  //   peso: '0 kg',
-  //   xp: '',
-  //   xpNl: '',
-  //   pvAt: 0,
-  //   ph: 0,
-  //   phAt: 0,
-  //   pm: 0,
-  //   pmAt: 0,
-  //   pf: 0,
-  //   pfAt: 0,
-  //   protecoes: {
-  //     armaduara1: {
-  //       name: '',
-  //       value: 0,
-  //     },
-  //     armaduara2: {
-  //       name: '',
-  //       value: 0,
-  //     },
-  //     escudo: {
-  //       name: '',
-  //       value: 0,
-  //     },
-  //     outros: {
-  //       name: '',
-  //       value: 0,
-  //     },
-  //   },
-  //   linhas: [
-  //     { title: 'CON', full: 'Constituição', value: 0, mod: 0 },
-  //     { title: 'FR', full: 'Força', value: 0, mod: 0 },
-  //     { title: 'DEX', full: 'Destresa', value: 0, mod: 0 },
-  //     { title: 'AGI', full: 'Agilidade', value: 0, mod: 0 },
-  //     { title: 'INT', full: 'Inteligencia', value: 0, mod: 0 },
-  //     { title: 'WILL', full: 'Força de Vontade', value: 0, mod: 0 },
-  //     { title: 'PER', full: 'Percepção', value: 0, mod: 0 },
-  //     { title: 'CAR', full: 'Carisma', value: 0, mod: 0 },
-  //   ],
-  //   aprimoramentos: [
-  //     {
-  //       nome: '',
-  //       custo: '',
-  //     },
-  //     {
-  //       nome: '',
-  //       custo: '',
-  //     },
-  //     {
-  //       nome: '',
-  //       custo: '',
-  //     },
-  //     {
-  //       nome: '',
-  //       custo: '',
-  //     },
-  //     {
-  //       nome: '',
-  //       custo: '',
-  //     },
-  //     {
-  //       nome: '',
-  //       custo: '',
-  //     },
-  //     {
-  //       nome: '',
-  //       custo: '',
-  //     },
-  //     {
-  //       nome: '',
-  //       custo: '',
-  //     },
-  //   ],
-  //   pericias: [
-  //     {
-  //       nome: 'Nome',
-  //       atributo: 'atributo',
-  //       gasto: 0,
-  //     },
-  //     {
-  //       nome: 'Nome',
-  //       atributo: 'atributo',
-  //       gasto: 0,
-  //     },
-  //     {
-  //       nome: 'Nome',
-  //       atributo: 'atributo',
-  //       gasto: 0,
-  //     },
-  //     {
-  //       nome: 'Nome',
-  //       atributo: 'atributo',
-  //       gasto: 0,
-  //     },
-  //     {
-  //       nome: 'Nome',
-  //       atributo: 'atributo',
-  //       gasto: 0,
-  //     },
-  //     {
-  //       nome: 'Nome',
-  //       atributo: 'atributo',
-  //       gasto: 0,
-  //     },
-  //     {
-  //       nome: 'Nome',
-  //       atributo: 'atributo',
-  //       gasto: 0,
-  //     },
-  //     {
-  //       nome: 'Nome',
-  //       atributo: 'atributo',
-  //       gasto: 0,
-  //     },
-  //     {
-  //       nome: 'Nome',
-  //       atributo: 'atributo',
-  //       gasto: 0,
-  //     },
-  //     {
-  //       nome: 'Nome',
-  //       atributo: 'atributo',
-  //       gasto: 0,
-  //     },
-  //     {
-  //       nome: 'Nome',
-  //       atributo: 'atributo',
-  //       gasto: 0,
-  //     },
-  //     {
-  //       nome: 'Nome',
-  //       atributo: 'atributo',
-  //       gasto: 0,
-  //     },
-  //     {
-  //       nome: 'Nome',
-  //       atributo: 'atributo',
-  //       gasto: 0,
-  //     },
-  //     {
-  //       nome: 'Nome',
-  //       atributo: 'atributo',
-  //       gasto: 0,
-  //     },
-  //   ],
-  //   periciasComArmas: [
-  //     {
-  //       nome: 'Briga',
-  //       atributo: '',
-  //       tipo: '',
-  //       gastoAt: '',
-  //       at: '',
-  //       def: '',
-  //       gastoDef: '',
-  //       dano: '',
-  //     },
-  //     {
-  //       nome: 'Pistola',
-  //       atributo: 'DEX  ',
-  //       tipo: 'Ranged',
-  //       gastoAt: '',
-  //       at: 20,
-  //       def: '',
-  //       gastoDef: '',
-  //       dano: '',
-  //     },
-  //     {
-  //       nome: 'Armas de cano longo',
-  //       atributo: 'DEX',
-  //       tipo: 'Ranged',
-  //       gastoAt: '',
-  //       at: 20,
-  //       def: '',
-  //       gastoDef: '',
-  //       dano: '',
-  //     },
-  //   ],
-  // });
+export const INITIAL_STATE = {
+  nomeDoPersonagem: '',
+  religião: '',
+  localDeNascimento: '',
+  nome_do_jogador: '',
+  kit: '',
+  nivel: 0,
+  religiao: '',
+  nomeDoJogador: '',
+  idiomas: '',
+  sexo: '',
+  altura: '',
+  cabelos: '',
+  olhos: '',
+  idadeAparente: 0,
+  idadeReal: 0,
+  peso: '0 kg',
+  xp: '',
+  xpNl: '',
+  pvAt: 0,
+  ph: 0,
+  phAt: 0,
+  pm: 0,
+  pmAt: 0,
+  pf: 0,
+  pfAt: 0,
+  protecoes: {
+    armaduara1: {
+      name: '',
+      value: 0,
+    },
+    armaduara2: {
+      name: '',
+      value: 0,
+    },
+    escudo: {
+      name: '',
+      value: 0,
+    },
+    outros: {
+      name: '',
+      value: 0,
+    },
+  },
+  linhas: [
+    { title: 'CON', full: 'Constituição', value: 0, mod: 0 },
+    { title: 'FR', full: 'Força', value: 0, mod: 0 },
+    { title: 'DEX', full: 'Destresa', value: 0, mod: 0 },
+    { title: 'AGI', full: 'Agilidade', value: 0, mod: 0 },
+    { title: 'INT', full: 'Inteligencia', value: 0, mod: 0 },
+    { title: 'WILL', full: 'Força de Vontade', value: 0, mod: 0 },
+    { title: 'PER', full: 'Percepção', value: 0, mod: 0 },
+    { title: 'CAR', full: 'Carisma', value: 0, mod: 0 },
+  ],
+  aprimoramentos: [
+    {
+      nome: '',
+      custo: '',
+    },
+    {
+      nome: '',
+      custo: '',
+    },
+    {
+      nome: '',
+      custo: '',
+    },
+    {
+      nome: '',
+      custo: '',
+    },
+    {
+      nome: '',
+      custo: '',
+    },
+    {
+      nome: '',
+      custo: '',
+    },
+    {
+      nome: '',
+      custo: '',
+    },
+    {
+      nome: '',
+      custo: '',
+    },
+  ],
+  pericias: [
+    {
+      nome: 'Nome',
+      atributo: 'atributo',
+      gasto: 0,
+    },
+    {
+      nome: 'Nome',
+      atributo: 'atributo',
+      gasto: 0,
+    },
+    {
+      nome: 'Nome',
+      atributo: 'atributo',
+      gasto: 0,
+    },
+    {
+      nome: 'Nome',
+      atributo: 'atributo',
+      gasto: 0,
+    },
+    {
+      nome: 'Nome',
+      atributo: 'atributo',
+      gasto: 0,
+    },
+    {
+      nome: 'Nome',
+      atributo: 'atributo',
+      gasto: 0,
+    },
+    {
+      nome: 'Nome',
+      atributo: 'atributo',
+      gasto: 0,
+    },
+    {
+      nome: 'Nome',
+      atributo: 'atributo',
+      gasto: 0,
+    },
+    {
+      nome: 'Nome',
+      atributo: 'atributo',
+      gasto: 0,
+    },
+    {
+      nome: 'Nome',
+      atributo: 'atributo',
+      gasto: 0,
+    },
+    {
+      nome: 'Nome',
+      atributo: 'atributo',
+      gasto: 0,
+    },
+    {
+      nome: 'Nome',
+      atributo: 'atributo',
+      gasto: 0,
+    },
+    {
+      nome: 'Nome',
+      atributo: 'atributo',
+      gasto: 0,
+    },
+    {
+      nome: 'Nome',
+      atributo: 'atributo',
+      gasto: 0,
+    },
+  ],
+  periciasComArmas: [
+    {
+      nome: 'Briga',
+      atributo: '',
+      tipo: '',
+      gastoAt: '',
+      at: 0,
+      def: '',
+      gastoDef: '',
+      dano: '',
+    },
+    {
+      nome: 'Pistola',
+      atributo: 'DEX  ',
+      tipo: 'Ranged',
+      gastoAt: '',
+      at: 20,
+      def: '',
+      gastoDef: '',
+      dano: '',
+    },
+    {
+      nome: 'Armas de cano longo',
+      atributo: 'DEX',
+      tipo: 'Ranged',
+      gastoAt: '',
+      at: 20,
+      def: '',
+      gastoDef: '',
+      dano: '',
+    },
+  ],
+};
+
+export interface FichaState {
+  nomeDoPersonagem: string;
+  religião: string;
+  localDeNascimento: string;
+  kit: string;
+  nivel: number;
+  religiao: string;
+  nomeDoJogador: string;
+  idiomas: string;
+  sexo: string;
+  altura: string;
+  cabelos: string;
+  olhos: string;
+  idadeAparente: number;
+  idadeReal: number;
+  peso: string;
+  xp: string;
+  xpNl: string;
+  pvAt: number;
+  ph: number;
+  phAt: number;
+  pm: number;
+  pmAt: number;
+  pf: number;
+  pfAt: number;
+  protecoes: {
+    armaduara1: {
+      name: string;
+      value: number;
+    };
+    armaduara2: {
+      name: string;
+      value: number;
+    };
+    escudo: {
+      name: string;
+      value: number;
+    };
+    outros: {
+      name: string;
+      value: number;
+    };
+  };
+  linhas: { title: string; full: string; value: number; mod: number }[];
+  aprimoramentos: {
+    nome: string;
+    custo: string;
+  }[];
+
+  pericias: {
+    nome: string;
+    atributo: string;
+    gasto: number;
+  }[];
+
+  periciasComArmas: {
+    nome: string;
+    atributo: string;
+    tipo: string;
+    gastoAt: string;
+    at: number;
+    def: string;
+    gastoDef: string;
+    dano: string;
+  }[];
+}
+
+export interface FichaProps<T = any> {
+  categoriaIndex: number;
+  fichaIndex: number;
+  state: [T[][], React.Dispatch<React.SetStateAction<T[][]>>];
+}
+
+const Ficha: React.FC<FichaProps<FichaState>> = ({
+  categoriaIndex,
+  fichaIndex,
+  state,
+}) => {
+  const [estado, setEstado] = state;
 
   function handleUpdate(
     e: React.ChangeEvent<HTMLInputElement>,
@@ -223,7 +302,7 @@ const Ficha: React.FC = () => {
     if (parseInt(e.target.value, 10) > limite) {
       e.target.value = `${limite}`;
     }
-    const [a, index] = e.target.id.split(' ');
+    const [, index] = e.target.id.split(' ');
     try {
       const b = document.getElementById(`percent ${index}`) as HTMLInputElement;
       b.value = b.value
@@ -240,11 +319,11 @@ const Ficha: React.FC = () => {
         <Cabecalho>
           <div>
             <label htmlFor="name">Nome Do Personagem</label>
-            <input type="text" id="name" />
+            <input type="text" id="name" value={categoriaIndex} />
           </div>
           <div>
             <label htmlFor="name">Religião</label>
-            <input type="text" />
+            <input type="text" value={fichaIndex} />
           </div>
           <div>
             <label htmlFor="name">Local de Nascimento</label>
@@ -277,7 +356,7 @@ const Ficha: React.FC = () => {
         <img src="" alt="imagem da ficha" id="profile" />
         <div>
           <Attributes>
-            {/* {estado.linhas.map((l, index) => (
+            {estado[categoriaIndex][fichaIndex].linhas.map((l, index) => (
               <tr key={index}>
                 <td>
                   <div>
@@ -312,7 +391,7 @@ const Ficha: React.FC = () => {
                   />
                 </td>
               </tr>
-            ))} */}
+            ))}
           </Attributes>
 
           <PericiasComArmas>
@@ -360,62 +439,64 @@ const Ficha: React.FC = () => {
                   </div>
                 </td>
               </tr>
-              {/* {estado.periciasComArmas.map((pComArmas, index) => (
-                <tr key={index}>
-                  <td>
-                    <input type="text" className="nome" />
-                  </td>
-                  <td>
-                    <button
-                      type="button"
-                      className="atributo"
-                      onClick={(e) => {
-                        console.log('Foi');
-                        e.preventDefault();
-                      }}
-                    />
-                  </td>
-                  <td>
-                    <button
-                      type="button"
-                      className="tipo"
-                      onClick={(e) => {
-                        console.log('Foi');
-                        e.preventDefault();
-                      }}
-                    />
-                  </td>
-                  <td>
-                    <input type="number" className="gasto" />
-                  </td>
-                  <td>
-                    <button
-                      type="button"
-                      className="atk"
-                      onClick={(e) => {
-                        console.log('Foi');
-                        e.preventDefault();
-                      }}
-                    />
-                  </td>
-                  <td>
-                    <button
-                      type="button"
-                      className="def"
-                      onClick={(e) => {
-                        console.log('Foi');
-                        e.preventDefault();
-                      }}
-                    />
-                  </td>
-                  <td>
-                    <input type="number" className="gasto" />
-                  </td>
-                  <td>
-                    <input type="text" className="dano" />
-                  </td>
-                </tr>
-              ))} */}
+              {estado[categoriaIndex][fichaIndex].periciasComArmas.map(
+                (pComArmas, index) => (
+                  <tr key={index}>
+                    <td>
+                      <input type="text" className="nome" />
+                    </td>
+                    <td>
+                      <button
+                        type="button"
+                        className="atributo"
+                        onClick={(e) => {
+                          console.log('Foi');
+                          e.preventDefault();
+                        }}
+                      />
+                    </td>
+                    <td>
+                      <button
+                        type="button"
+                        className="tipo"
+                        onClick={(e) => {
+                          console.log('Foi');
+                          e.preventDefault();
+                        }}
+                      />
+                    </td>
+                    <td>
+                      <input type="number" className="gasto" />
+                    </td>
+                    <td>
+                      <button
+                        type="button"
+                        className="atk"
+                        onClick={(e) => {
+                          console.log('Foi');
+                          e.preventDefault();
+                        }}
+                      />
+                    </td>
+                    <td>
+                      <button
+                        type="button"
+                        className="def"
+                        onClick={(e) => {
+                          console.log('Foi');
+                          e.preventDefault();
+                        }}
+                      />
+                    </td>
+                    <td>
+                      <input type="number" className="gasto" />
+                    </td>
+                    <td>
+                      <input type="text" className="dano" />
+                    </td>
+                  </tr>
+                ),
+              )}
             </div>
           </PericiasComArmas>
           <PericiasComArmas>
@@ -443,36 +524,38 @@ const Ficha: React.FC = () => {
                   </div>
                 </td>
               </tr>
-              {/* {estado.pericias.map((pComArmas, index) => (
-                <tr key={index}>
-                  <td>
-                    <input type="text" className="nome" />
-                  </td>
-                  <td>
-                    <button
-                      type="button"
-                      className="atributo"
-                      onClick={(e) => {
-                        console.log('Foi');
-                        e.preventDefault();
-                      }}
-                    />
-                  </td>
-                  <td>
-                    <input type="number" className="gasto" />
-                  </td>
-                  <td>
-                    <button
-                      type="button"
-                      className="tipo"
-                      onClick={(e) => {
-                        console.log('Foi');
-                        e.preventDefault();
-                      }}
-                    />
-                  </td>
-                </tr>
-              ))} */}
+              {estado[categoriaIndex][fichaIndex].pericias.map(
+                (pComArmas, index) => (
+                  <tr key={index}>
+                    <td>
+                      <input type="text" className="nome" />
+                    </td>
+                    <td>
+                      <button
+                        type="button"
+                        className="atributo"
+                        onClick={(e) => {
+                          console.log('Foi');
+                          e.preventDefault();
+                        }}
+                      />
+                    </td>
+                    <td>
+                      <input type="number" className="gasto" />
+                    </td>
+                    <td>
+                      <button
+                        type="button"
+                        className="tipo"
+                        onClick={(e) => {
+                          console.log('Foi');
+                          e.preventDefault();
+                        }}
+                      />
+                    </td>
+                  </tr>
+                ),
+              )}
             </div>
           </PericiasComArmas>
         </div>
@@ -600,7 +683,9 @@ const Ficha: React.FC = () => {
                     type="number"
                     disabled
                     id="pv_atual"
-                    // value={estado.protecoes.outros.value}
+                    value={
+                      estado[categoriaIndex][fichaIndex].protecoes.outros.value
+                    }
                   />
                 </div>
               </div>
@@ -614,16 +699,15 @@ const Ficha: React.FC = () => {
               <h4>armadura</h4>
               <input
                 type="number"
-                // onChange={(e) => {
-                //   const novoEstado = estado;
-                //   if (e.target.value) {
-                //     novoEstado.protecoes.armaduara1.value = parseInt(
-                //       e.target.value,
-                //       10,
-                //     );
-                //   }
-                //   setEstado(novoEstado);
-                // }}
+                onChange={(e) => {
+                  const novoEstado = estado;
+                  if (e.target.value) {
+                    novoEstado[categoriaIndex][
+                      fichaIndex
+                    ].protecoes.armaduara1.value = parseInt(e.target.value, 10);
+                  }
+                  setEstado(novoEstado);
+                }}
               />
             </div>
             <div>
@@ -632,16 +716,15 @@ const Ficha: React.FC = () => {
               <h4>armadura</h4>
               <input
                 type="number"
-                // onChange={(e) => {
-                //   const novoEstado = estado;
-                //   if (e.target.value) {
-                //     novoEstado.protecoes.armaduara2.value = parseInt(
-                //       e.target.value,
-                //       10,
-                //     );
-                //   }
-                //   setEstado(novoEstado);
-                // }}
+                onChange={(e) => {
+                  const novoEstado = estado;
+                  if (e.target.value) {
+                    novoEstado[categoriaIndex][
+                      fichaIndex
+                    ].protecoes.armaduara2.value = parseInt(e.target.value, 10);
+                  }
+                  setEstado(novoEstado);
+                }}
               />
             </div>
             <div>
@@ -650,16 +733,15 @@ const Ficha: React.FC = () => {
               <h4>escudo</h4>
               <input
                 type="number"
-                // onChange={(e) => {
-                //   const novoEstado = estado;
-                //   if (e.target.value) {
-                //     novoEstado.protecoes.escudo.value = parseInt(
-                //       e.target.value,
-                //       10,
-                //     );
-                //   }
-                //   setEstado(novoEstado);
-                // }}
+                onChange={(e) => {
+                  const novoEstado = estado;
+                  if (e.target.value) {
+                    novoEstado[categoriaIndex][
+                      fichaIndex
+                    ].protecoes.escudo.value = parseInt(e.target.value, 10);
+                  }
+                  setEstado(novoEstado);
+                }}
               />
             </div>
             <div>
@@ -668,17 +750,18 @@ const Ficha: React.FC = () => {
               <h4>outros</h4>
               <input
                 type="number"
-                // onChange={(e) => {
-                //   const novoEstado = estado;
-                //   if (e.target.value) {
-                //     novoEstado.protecoes.outros.value = parseInt(
-                //       e.target.value,
-                //       10,
-                //     );
-                //   }
-                //   setEstado(novoEstado);
-                //   console.log(estado.protecoes.outros);
-                // }}
+                onChange={(e) => {
+                  const novoEstado = estado;
+                  if (e.target.value) {
+                    novoEstado[categoriaIndex][
+                      fichaIndex
+                    ].protecoes.outros.value = parseInt(e.target.value, 10);
+                  }
+                  setEstado(novoEstado);
+                  console.log(
+                    estado[categoriaIndex][fichaIndex].protecoes.outros,
+                  );
+                }}
               />
             </div>
           </Protecoes>
@@ -698,16 +781,18 @@ const Ficha: React.FC = () => {
                   </div>
                 </td>
               </tr>
-              {/* {estado.aprimoramentos.map((pComArmas, index) => (
-                <tr key={index}>
-                  <td>
-                    <input type="text" className="nome" />
-                  </td>
-                  <td>
-                    <input type="number" />
-                  </td>
-                </tr>
-              ))} */}
+              {estado[categoriaIndex][fichaIndex].aprimoramentos.map(
+                (pComArmas, index) => (
+                  <tr key={index}>
+                    <td>
+                      <input type="text" className="nome" />
+                    </td>
+                    <td>
+                      <input type="number" />
+                    </td>
+                  </tr>
+                ),
+              )}
             </div>
           </PericiasComArmas>
         </div>

@@ -18,11 +18,19 @@ export const Container = styled.div<ContainerProps>`
     font-family: cursive;
     font-style: italic;
     color: #e65100;
-    font-size: 1.25rem;
+    font-size: 2rem;
     margin-bottom: 0.25rem;
+
+    @media (orientation: portrait) {
+      font-size: 2.5rem;
+    }
   }
 
   input {
-    height: 2.5rem;
+    height: 3.5rem;
+
+    @media (orientation: portrait) {
+      height: 4rem;
+    }
   }
 `;
