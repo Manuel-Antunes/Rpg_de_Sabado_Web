@@ -1,6 +1,5 @@
 import React, { ButtonHTMLAttributes } from 'react';
 
-import {} from '@rocketseat/unform';
 import { Button } from './styles';
 
 type SubmitButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;

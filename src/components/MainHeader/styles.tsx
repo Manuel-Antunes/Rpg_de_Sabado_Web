@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import styled, { css } from 'styled-components';
 
 interface ContainerProps {
@@ -12,12 +13,12 @@ export const Container = styled.div<ContainerProps>`
   align-items: center;
   h1 {
     color: #e65100;
-    ${(props) =>
-      props.resize
-        ? css`
+    ${(props: any) =>
+    props.resize
+      ? css`
             font-size: 3rem;
           `
-        : css`
+      : css`
             font-size: 7rem;
           `}
     z-index: -1;
